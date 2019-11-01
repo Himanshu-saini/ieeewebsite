@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sass_processor',
+    'ieeewebsite.apps.home',
+    'ieeewebsite.apps.about',
+    'ieeewebsite.apps.events',
+    'ieeewebsite.apps.team',
 ]
 
 MIDDLEWARE = [
@@ -118,3 +123,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+# STATIC_ROOT = " "
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR,'/ieeewebsite/apps/static'),
+#     os.path.join(BASE_DIR,'/ieeewebsite/apps/home/static'),
+#     os.path.join(BASE_DIR,'/ieeewebsite/apps/about/static'),
+#     os.path.join(BASE_DIR,'/ieeewebsite/apps/team/static'),
+#     os.path.join(BASE_DIR,'/ieeewebsite/apps/events/static'),
+# )
+# STATICFILES_FINDERS = [
+#     'django.contrib.staticfiles.finders.FileSystemFinder',
+#     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#     'sass_processor.finders.CssFinder',
+# ]
+# SASS_PROCESSOR_URL = "/static/"
+# SASS_PROCESSOR_ROOT = "/static/"
+

@@ -1,0 +1,18 @@
+{% extends  'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block contentstylesheet %}
+<link rel="stylesheet" type="text/css" href="{% sass_src  'team/stylesheets/team-style-sass.scss' %}?{% now 'jS S Y H:i' %}" />
+{% endblock contentstylesheet %}
+
+{% block content %}
+<div class="body-container">
+</div>
+
+<script src="{% static 'team/javascripts/team-div.js' %}?{% now 'jS S Y H:i' %}"></script>
+
+{% endblock content %}

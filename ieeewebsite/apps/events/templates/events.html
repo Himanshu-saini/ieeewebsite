@@ -1,0 +1,85 @@
+{% extends  'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block contentstylesheet %}
+<link rel="stylesheet" type="text/css" href="{% sass_src  'events/stylesheets/events-style-sass.scss' %}?{% now 'jS S Y H:i' %}" />
+{% endblock contentstylesheet %}
+
+{% block content %}
+<div class="body-container">
+    <div class="heading">
+        <h1>Events</h1>
+    </div>
+    <div class="sub-container">
+        <div class="sub-columns">
+            <div class="col-heading">
+                <h2>Upcoming Events</h2>
+            </div>
+            <div class="events-row">
+                <div class="inner-container">
+                    <div class="events-col">
+                        <div class="col-background"></div>
+                        <div class="events-overlay">
+                            <div class="options">
+                                <div class="like">
+                                    <img src="" />
+                                </div>
+                                <div class="share">
+                                    <img src="" />
+                                </div>
+                            </div>
+                            <div class="event-info">
+                                <div class="event-name">
+                                    Techblocks 5.2
+                                </div>
+                                <div class="event-date">
+                                    1-5 October,2019
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-columns">
+            <div class="col-heading">
+                <h2>Main Events</h2>
+            </div>
+            <div class="events-row">
+                <div class="inner-container">
+                    {% for i in Events %}
+                    <div class="events-col">
+                        <div class="col-background"></div>
+                        <div class="events-overlay">
+                            <div class="options">
+                                <div class="like">
+                                    <img src="" />
+                                </div>
+                                <div class="share">
+                                    <img src="" />
+                                </div>
+                            </div>
+                            <div class="event-info">
+                                <div class="event-name">
+                                    Techblocks 5.2
+                                </div>
+                                <div class="event-date">
+                                    1-5 October,2019
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'events/javascripts/team-div.js' %}?{% now 'jS S Y H:i' %}"></script>
+
+{% endblock content %}
