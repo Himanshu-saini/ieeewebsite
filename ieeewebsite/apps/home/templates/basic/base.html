@@ -6,31 +6,7 @@
 		<title>{% block title %}{% endblock title %}</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'  type='text/css'>   Google fonts -->
-		<!-- <link rel="stylesheet" type="text/css" href="{% static 'firstpage/stylesheets/index-style.css' %}?{% now 'jS S Y H:i' %}"> -->
-		<!-- <script src="{% static 'firstpage/javascripts/index-page-scripts.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-        <!-- <meta name="keywords" content="IEEE JIIT" /> -->
-        <!-- <meta name="description" content="IEEE BS JIIT website"> -->
-        <!-- <meta name="author" content="ieeejiit62web"> -->
-
-        <!-- Web Fonts -->
-        <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700" rel="stylesheet"> -->
-
-        <!-- Vendor Styles -->
-        <!-- <link href="{% static 'stylesheets/vendor/bootstrap/css/bootstrap.min.css' %}?{% now 'jS S Y H:i' %}" rel="stylesheet" type="text/css"/> -->
-        <!-- <link href="{% static 'stylesheets/css/animate.css' %}?{% now 'jS S Y H:i' %}" rel="stylesheet" type="text/css"/> -->
-        <!-- <link href="{% static 'stylesheets/vendor/themify/themify.css' %}?{% now 'jS S Y H:i' %}" rel="stylesheet" type="text/css"/> -->
-        <!-- <link href="{% static 'stylesheets/vendor/scrollbar/scrollbar.min.css' %}?{% now 'jS S Y H:i' %}" rel="stylesheet" type="text/css"/> -->
-        <!-- <link href="{% static 'stylesheets/vendor/magnific-popup/magnific-popup.css' %}?{% now 'jS S Y H:i' %}" rel="stylesheet" type="text/css"/> -->
-        <!-- <link href="{% static 'stylesheets/vendor/swiper/swiper.min.css' %}?{% now 'jS S Y H:i' %}" rel="stylesheet" type="text/css"/> -->
-        <!-- <link href="{% static 'stylesheets/vendor/cubeportfolio/css/cubeportfolio.min.css' %}?{% now 'jS S Y H:i' %}" rel="stylesheet" type="text/css"/> -->
-
-        <!-- Theme Styles -->
-        <!-- <link href="{% static 'stylesheets/css/style.css' %}?{% now 'jS S Y H:i' %}" rel="stylesheet" type="text/css"/> -->
-        <!-- <link href="{% static 'stylesheets/css/global/global.css' %}?{% now 'jS S Y H:i' %}" rel="stylesheet" type="text/css"/> -->
-
-        
-		{% block contentstylesheet %}
+        {% block contentstylesheet %}
         {% endblock contentstylesheet %}
         
 	</head>
@@ -42,38 +18,5 @@
 
     {% include 'footer.html' %}
 
-    <!-- Back To Top -->
-    <a href="javascript:void(0);" class="s-back-to-top js__back-to-top"></a>
-
-    <!--========== JAVASCRIPTS (Load javascripts at bottom, this will reduce page load time) ==========-->
-    <!-- Vendor -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/vendor/jquery.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/vendor/jquery.migrate.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/vendor/bootstrap/js/bootstrap.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/vendor/jquery.smooth-scroll.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/vendor/jquery.back-to-top.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/vendor/scrollbar/jquery.scrollbar.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/vendor/magnific-popup/jquery.magnific-popup.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/vendor/swiper/swiper.jquery.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/vendor/waypoint.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/vendor/counterup.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/vendor/cubeportfolio/js/jquery.cubeportfolio.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/vendor/jquery.parallax.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXUGTFS09pLVdsYEE9YrO2y4IAncAO2U"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/vendor/jquery.wow.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-
-    <!-- General Components and Settings -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/js/global.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/js/components/header-sticky.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/js/components/scrollbar.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/js/components/magnific-popup.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/js/components/swiper.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/js/components/counter.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/js/components/portfolio-3-col.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/js/components/parallax.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/js/components/google-map.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!-- <script type="text/javascript" src="{% static 'javascripts/js/components/wow.min.js' %}?{% now 'jS S Y H:i' %}"></script> -->
-    <!--========== END JAVASCRIPTS ==========-->
-    
-  </body>
+    </body>
 </html>
