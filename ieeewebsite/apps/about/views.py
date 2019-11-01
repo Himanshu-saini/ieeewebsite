@@ -4,4 +4,4 @@ from django.http import HttpResponse, HttpResponseRedirect
 # Create your views here.
 
 def about(req):
-    return render(req,"team.html",{ 'title':'IEEE About' })
+    return render(req,"about.html",{ 'title':'IEEE About' })

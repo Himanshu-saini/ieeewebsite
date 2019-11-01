@@ -4,4 +4,4 @@ from django.http import HttpResponse, HttpResponseRedirect
 # Create your views here.
 
 def home(req):
-    return render(req,"team.html",{ 'title':'IEEE Home' })
+    return render(req,"index.html",{ 'title':'IEEE Home' })
