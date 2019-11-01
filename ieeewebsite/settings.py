@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=(g&rgn3y6+q*o+eqm8eymvk1+vl6i**vngel(ef*b%82%gzsz'
+SECRET_KEY = 'ydqhf=3o2&awu882^k*%&(ft4h1@j@kx0_tnw^zadxe_rcsy74'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sass_processor',
+    'ieeewebsite.apps.home',
+    'ieeewebsite.apps.about',
+    'ieeewebsite.apps.events',
+    'ieeewebsite.apps.team',
 ]
 
 MIDDLEWARE = [
@@ -117,4 +122,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = os.path.join(BASE_DIR,'/static/')
+STATIC_ROOT = " "
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR,'/ieeewebsite/apps/home/static'),
+    os.path.join(BASE_DIR,'/ieeewebsite/apps/about/static'),
+    os.path.join(BASE_DIR,'/ieeewebsite/apps/team/static'),
+    os.path.join(BASE_DIR,'/ieeewebsite/apps/events/static'),
+)
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
+]
+# SASS_PROCESSOR_URL = "/static/"
+SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR,'/static/')
+
