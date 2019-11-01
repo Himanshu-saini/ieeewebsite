@@ -21,5 +21,6 @@ urlpatterns = [
     path('about',include("ieeewebsite.apps.about.urls")),
     path('team',include("ieeewebsite.apps.team.urls")),
     path('events',include("ieeewebsite.apps.events.urls")),
+    path('home',include("ieeewebsite.apps.home.urls")),
     path('',include("ieeewebsite.apps.home.urls")),
 ]
