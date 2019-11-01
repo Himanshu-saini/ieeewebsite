@@ -1,0 +1,149 @@
+{% extends  'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block contentstylesheet %}
+<link rel="stylesheet" type="text/css" href="{% sass_src  'team/stylesheets/team-style-sass.scss' %}?{% now 'jS S Y H:i' %}" />
+{% endblock contentstylesheet %}
+
+{% block content %}
+<div class="body-container">
+    <div class="head-division">
+        <div class="background-img">
+            <img src="" />
+        </div>
+        <!-- <div class="background-div">        
+            {% for i in prev_team %}
+            <div class="circle-img">
+                <img src="{% static 'team/images/members/webmaster3.jpg' %}" />
+            </div>
+            {% endfor %}
+        </div> -->
+        <div class="div-heading">
+            <h1> 
+                Our family
+            </h1>
+        </div>
+    </div>
+    
+    <div class="sub-division">
+        <div class="div-heading">
+            <h1>
+                Present Team
+            </h1>
+        </div>
+        <div class="present-team-div">
+            {% for i in present_team %}
+            <div class="member-col">
+                <div class="inner-col">
+                    <div class="member-name">
+                        <h1>
+                            {{ i.Member_Name }}
+                        </h1>
+                    </div>
+                    <div class="position-name">
+                        {{ i.Member_Post }}
+                    </div>
+                    <div class="display-pic">
+                        <img src="{% static i.Display_img.url %}" />
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="sub-division">
+        <div class="div-heading">
+            <h1>
+                Previous Team
+            </h1>
+        </div>
+        <div class="prev-team">
+            <div class="inner-wrapper">
+                {% for j in session %}
+                <div class="team-div">
+                    <div class="session-col">
+                        <h2>Session 2017-2018</h2>
+                    </div>        
+                    <div class="member-container">
+                    {% for i in test %}
+                    <div class="member-col" >
+                        <div class="member-info">
+                            <div class="display-pic" >
+                                <img src="{% static 'team/images/members/webmaster3.jpg' %}" />
+                            </div>
+                            <div class="member-name">
+                                <h3>Himanshu saini</h3>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    <div class="sub-division">
+        <div class="div-heading">
+            <h1>
+                Previous Team
+            </h1>
+        </div>
+        <div class="prev-team">
+            <div class="inner-wrapper">
+                <div class="team-div-2">
+                    <div class="session-col">
+                        <h2>Session 2017-2018</h2>
+                    </div>        
+                    <div class="member-container">
+                    {% for i in test %}
+                    <div class="member-col" >
+                        <div class="display-pic" >
+                            <img src="{% static 'team/images/members/webmaster3.jpg' %}" />
+                        </div>
+                    </div>
+                    {% endfor %}
+                    </div>
+                </div>
+                <div class="team-div">
+                    <div class="session-col">
+                        <h2>Session 2016-2017</h2>
+                    </div>        
+                    <div class="member-container">        
+                    {% for i in test %}
+                    <div class="member-col" >
+                        <div class="display-pic">
+                            <img src="{% static 'team/images/members/webmaster3.jpg' %}" />
+                        </div>
+                    </div>
+                    {% endfor %}
+                    </div>
+                </div>
+                <div class="team-div">
+                    <div class="session-col">
+                        <h2>Session 2016-2017</h2>
+                    </div>        
+                    <div class="member-container">        
+                    {% for i in test %}
+                    <div class="member-col" >
+                        <div class="display-pic">
+                            <img src="{% static 'team/images/members/webmaster3.jpg' %}" />
+                        </div>
+                    </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="{% static 'team/javascripts/team-div.js' %}?{% now 'jS S Y H:i' %}"></script>
+
+{% endblock content %}
