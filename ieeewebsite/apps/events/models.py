@@ -5,7 +5,7 @@ import datetime
 
 status_options = ( ('CMP','Completed') , ('ONG','Ongoing') , ('UPC','Upcoming'))
 
-class Events(models.Model):
+class Event(models.Model):
     Event_Name = models.CharField(max_length = 30,help_text= "Name Of the Event")
     Discription = models.CharField(max_length = 500,help_text= "Small description about the Event",blank=True,null=True)
     Event_Date = models.DateField( default=datetime.date.today())
