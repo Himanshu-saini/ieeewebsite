@@ -8,12 +8,15 @@
 
 {% block contentstylesheet %}
 <link rel="stylesheet" type="text/css" href="{% sass_src  'home/stylesheets/home-style-sass.scss' %}?{% now 'jS S Y H:i' %}" />
+<link rel="stylesheet" type="text/css" href="{% sass_src  'home/stylesheets/slideshow-style-sass.scss' %}?{% now 'jS S Y H:i' %}" />
 {% endblock contentstylesheet %}
-
+    
 {% block content %}
 <div class="body-container">
+    {% include 'slideshow-div.html' %}
+    
 </div>
 
-<!-- <script src="{% static 'home/javascripts/home-div.js' %}?{% now 'jS S Y H:i' %}"></script> -->
+<script src="{% static 'home/javascripts/slideshow-div.js' %}?{% now 'jS S Y H:i' %}"></script>
 
 {% endblock content %}
