@@ -9,12 +9,28 @@
 {% block contentstylesheet %}
 <link rel="stylesheet" type="text/css" href="{% sass_src  'home/stylesheets/home-style-sass.scss' %}?{% now 'jS S Y H:i' %}" />
 <link rel="stylesheet" type="text/css" href="{% sass_src  'home/stylesheets/slideshow-style-sass.scss' %}?{% now 'jS S Y H:i' %}" />
+<link href="https://fonts.googleapis.com/css?family=Lato:300&display=swap" rel="stylesheet">  <!-- font-family: 'Lato', sans-serif; -->
+
 {% endblock contentstylesheet %}
     
 {% block content %}
 <div class="body-container">
     {% include 'slideshow-div.html' %}
-    
+    <div class="body-column">
+        <div class="content-container">
+            <div class="content-head">
+                <p class="small-text">WELCOME&nbspTO&nbspIEEE</p>
+                <p class="large-text">Institute Of Electrical And Electronics Engineering</p>
+            </div>
+            <div class="content">
+                <p>IEEE is the world’s largest technical professional organization dedicated to advancing technology for the benefit of humanity.</p>
+                <p>IEEE and its members inspire a global community to innovate for a better tomorrow through its more than
+                        420,000 members in over 160 countries, and its highly cited publications, conferences, technology standards,
+                        and professional and educational activities.</p>
+                <p>IEEE is the trusted “voice” for engineering, computing, and technology information around the globe.</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="{% static 'home/javascripts/slideshow-div.js' %}?{% now 'jS S Y H:i' %}"></script>
