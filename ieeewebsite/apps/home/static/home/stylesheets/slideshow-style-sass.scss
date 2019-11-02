@@ -1,0 +1,110 @@
+.top-cover{
+    position:relative;
+    top:8vh;
+    height:50vw; 
+    width:100%; 
+    margin:0;
+    padding: 0;
+    user-select: none;
+    @media screen and (min-width: 600px){
+            height: 90vh;
+    }
+    .Slides-container{
+        position: absolute;
+        overflow-x:hidden;
+        display: flex;
+        flex-flow: row nowrap;
+        height: 100%;
+        width: 100%;
+        .slide-col{
+            display:flex;
+            flex: 0 0 100%;
+            transition:.5s;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            font-family: 'Righteous', cursive;
+        }
+        .slide-wrap{
+            flex:0 0 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            .mySlides{
+                position:absolute;
+                height:100%;
+                width:100%;
+                margin:0;
+            }
+            .Overlay-text{
+                display:flex;
+                flex-flow: column wrap;
+                justify-content: space-around;
+                align-content: space-around;
+                position: absolute;
+                width:100%;
+                height:100%;
+                text-align:center;
+                z-index: 0;
+                color:white;
+                background: linear-gradient(145deg, rgba(100,100,100,.5)90%,rgba(200,200,200,.5) 40%);
+                font-size:1em;
+                @media screen and (min-width: 600px){
+                    font-size:2em;
+                }
+            }
+        }
+        
+    }
+    .Slides-container::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .prev, .next{
+        cursor: pointer;
+        position: absolute;
+        height: 100%;
+        width: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        padding: .1em;
+        color: white;
+        font-weight: bold;
+        transition: 0.6s ease;
+        font-size:5vw;
+        border-radius: 0 3px 3px 0;
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+        text-shadow:0 7px 1px rgba(200,200,200,1);
+    }
+    #slide-bullets{
+        display: flex;
+        flex-flow: row nowrap;
+        position: absolute;
+        width:98%;
+        justify-content: center;
+        bottom:0;
+        margin: 0;
+        padding: 1%;
+        .bullets{
+            min-width: 1vw;
+            min-height: 1vw;
+            border-radius: 50%;
+            margin: 0 .3vw;
+            transition: .7s;
+            background: #FFFFFF;
+            border: 1px black solid;
+        }
+        .active-bullet{
+            background: rgb(2,59,102);
+            box-shadow: 2px 2px 4px black;
+        }
+    }
+    
+}
