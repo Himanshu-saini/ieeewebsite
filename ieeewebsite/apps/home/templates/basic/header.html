@@ -5,15 +5,17 @@
 <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">   <!-- font-family: 'Oswald', sans-serif; -->
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">   <!-- font-family: 'Roboto', sans-serif; -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> <!-- font-family: 'Open Sans', sans-serif; --> 
+<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">  <!-- font-family: 'Righteous', cursive; -->
+
 <script src="{% static 'home/javascripts/header-div.js' %}?{% now 'jS S Y H:i' %}"></script>
 
 <!--========== HEADER ==========-->
 <header class="head">
     <div id="main-col">
-        <div class="logo-container">
+        <div class="logo-container" onclick="location.href='/home'">
             <img src="{% static 'home/images/logo/ieee.png' %}" />
         </div>
-        <div class="head-name">
+        <div class="head-name" onclick="location.href='/home'">
             IEEE&nbspSB&nbspJIIT
         </div>
     </div>
