@@ -1,4 +1,4 @@
-{% extends  'base.html' %}
+{% extends  'basic/base.html' %}
 {% load static %}
 {% load sass_tags %}
 
@@ -7,12 +7,31 @@
 {% endblock title %}
 
 {% block contentstylesheet %}
-<link rel="stylesheet" type="text/css" href="{% sass_src  'team/stylesheets/team-style-sass.scss' %}?{% now 'jS S Y H:i' %}" />
+<link rel="stylesheet" type="text/css" href="{% sass_src  'about/stylesheets/about-style-sass.scss' %}?{% now 'jS S Y H:i' %}" />
 {% endblock contentstylesheet %}
 
 {% block content %}
 <div class="body-container">
+    <div class="body-column horizontal-grid">
+        <div class="column-head">
+            ABOUT<BR> IEEE&nbspSB&nbspJIIT
+        </div>
+        <div class="column-content">
+            <p>
+                IEEE at JIIT is a student branch run by students of different branches of B.Tech. 
+                It was founded in 2008 with a goal to give opportunities to the students, 
+                within the campus and outside in Delhi,in the technical fields.
+            </p>
+            <p>
+                Through events, activities and projects, 
+                IEEE offers multiple educational and professional skills.
+            </p>
+        </div>
+        <div class="column-img">
+            <img src="{% static 'home/images/backgrounds/031.jpg' %}" />
+        </div>
+    </div>
 </div>
 
-<script src="{% static 'team/javascripts/team-div.js' %}?{% now 'jS S Y H:i' %}"></script>
+<!-- <script src="{% static 'about/javascripts/about-div.js' %}?{% now 'jS S Y H:i' %}"></script> -->
 {% endblock content %}
