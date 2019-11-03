@@ -1,0 +1,29 @@
+{% extends  'basic/base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+{% block contentstylesheet %}
+<link rel="stylesheet" type="text/css" href="{% sass_src  'home/stylesheets/error-style-sass.scss' %}?{% now 'jS S Y H:i' %}" />
+{% endblock contentstylesheet %}
+
+{% block content %}
+<div class="body-container">
+   <div class="image-container">
+       <img src="{% static 'home/images/backgrounds/error-img.jpg' %}" />
+       <!-- <img src="{% static 'home/images/backgrounds/031.jpg' %}" /> -->
+
+   </div> 
+   <div class="details-container">
+       <div class="message">
+            Go to Home
+       </div>
+       <div class="link-button">
+           <a class="button" href="/home">Home</a>
+       </div>
+   </div>
+</div>
+{% endblock content %}

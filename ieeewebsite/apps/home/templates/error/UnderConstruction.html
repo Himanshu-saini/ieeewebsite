@@ -1,0 +1,17 @@
+{% extends  'basic/base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+{% block contentstylesheet %}
+<link rel="stylesheet" type="text/css" href="{% sass_src  'about/stylesheets/about-style-sass.scss' %}?{% now 'jS S Y H:i' %}" />
+{% endblock contentstylesheet %}
+
+{% block content %}
+<div class="body-container">
+    
+</div>
+{% endblock content %}
