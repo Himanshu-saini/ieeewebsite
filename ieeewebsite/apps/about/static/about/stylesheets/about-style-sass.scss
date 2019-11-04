@@ -1,3 +1,5 @@
+@import "animation-rule-scss";
+
 body{
     margin:0;
     padding:0;
@@ -74,6 +76,7 @@ body{
                     width: 100%;
                 }
             }
+            
             .image-grid-2{
                 // width:80%;
                 height:70%;
@@ -81,17 +84,25 @@ body{
                 grid-template-columns: 49% 49%;
                 grid-column-gap: 2%;
                 align-self: center;
-            }
-            .image-grid-2:nth-child(odd){
-                .img-column:nth-child(1){
-                    height:90%;
-                    align-self: center;
+                // transform:translate(100%,30%);
+                &:nth-child(odd){
+                    .img-column{
+                        // animation: animation-slide-in-left 1s;
+                        @include animation(0, 1s, animation-slide-in-left, ease);
+                        &:nth-child(1){
+                            height:90%;
+                            align-self: center;
+                        }
+                    }
                 }
-            }
-            .image-grid-2:nth-child(even){
-                .img-column:nth-child(2){
-                    height:90%;
-                    align-self: center;
+                &:nth-child(even){
+                    .img-column{
+                        @include animation(0, 1s, animation-slide-in-right, ease);
+                        &:nth-child(2){
+                        height:90%;
+                        align-self: center;
+                        }
+                    }
                 }
             }
         }
