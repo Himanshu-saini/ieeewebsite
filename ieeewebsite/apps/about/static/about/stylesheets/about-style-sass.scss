@@ -88,7 +88,7 @@ body{
                 // transform:translate(100%,30%);
                 &:nth-child(odd){
                     .img-column{
-                        @include animation(0, 1.8s, fade-in-left, ease);
+                        @include animation(fade-in-left 1.8s ease);
                         &:nth-child(1){
                             height:90%;
                             align-self: center;
@@ -97,7 +97,7 @@ body{
                 }
                 &:nth-child(even){
                     .img-column{
-                        @include animation(0, 1.8s, fade-in-right, ease);
+                        @include animation(fade-in-right 1.8s ease);
                         &:nth-child(2){
                         height:90%;
                         align-self: center;

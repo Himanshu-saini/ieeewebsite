@@ -1,3 +1,5 @@
+@import "home/stylesheets/animation-rule-scss";
+
 $small-break: 600px;
 
 body
@@ -74,7 +76,184 @@ body
             //         }
             //     }
             // }
-            .present-team-div 
+            .present-team-div
+            {
+                position:relative;
+                display:flex;
+                flex-flow:row wrap;
+                justify-content: space-evenly;
+                width:100%;
+                .member-col
+                {
+                    position:relative;
+                    $box-length:40vw;
+                    width:$box-length;
+                    height:$box-length;
+                    @media only screen and (min-width:$small-break){
+                        $box-length:21vw;
+                        width:$box-length;
+                        height:$box-length;
+                    }
+                    margin:3% 4%;
+                    //clip-path: inset( 0 -100vw 0 0 );
+                    border-radius: 5px;
+                    .inner-col:hover 
+                    {
+                        .member-name
+                        {
+                            left:-6%;
+                            h1
+                            {
+                                transition:1s;
+                                left:0;
+                            }
+                        }
+                    }
+                    .inner-col
+                    {
+                        $light-background:rgba(200,200,200,.9);
+                        $dark-blue: rgb(5, 48, 84); 
+                        // $dark-blue: rgb(5, 48, 84); 
+                        position: absolute;
+                        width: 91%;
+                        height: 91%;
+                        right: -2%;
+                        top:4%;
+                        background:white;
+                        color: white;
+                        box-shadow: -3px 4px 3px rgb(10, 98, 94);
+                        .overlay-content{
+                            position:absolute;
+                            left:0;
+                            z-index:1;       
+                            width:100%;
+                            height:100%;  
+                            font-size: .5em;
+                            font-family: 'Righteous', cursive;
+                            // overflow:hidden;
+                            @media only screen and (min-width:$small-break){
+                                font-size: 1em;
+                            }   
+                            &:hover{
+                                .ieee-name{
+                                    @include animation(fade-in-top 1s ease forwards);
+                                }
+                                .member-name{
+                                    @include animation(fade-in-left 1s ease forwards);
+                                }
+                                .position-name{
+                                    @include animation(fade-in-right 1s ease forwards);
+                                }
+                            }             
+                            .ieee-name{
+                                position: absolute;
+                                top:0;
+                                left:0;
+                                font-size: .9em;
+                                font-weight: 700;   
+                                padding: 1.5%;
+                                color:$dark-blue;
+                                background: $light-background;
+                                opacity:0;
+                                .vertical-text{
+                                    writing-mode: vertical-lr;
+                                    text-orientation: mixed;
+                                    transform:rotate(180deg);
+                                }
+                                // z-index: 1;
+                                &:before{
+                                    position: absolute;
+                                    right: 0%;
+                                    bottom:-15%;
+                                    // bottom:0;
+                                    content: '';
+                                    width: 100%;
+                                    height: 15%;
+                                    background: linear-gradient(-45deg,rgba(0,0,0,0) 50%, $light-background 50%);
+
+                                }
+                            }
+                            .member-name
+                            {
+                                background: $dark-blue;
+                                // min-height: 10%;
+                                position: absolute;
+                                left: 9%;
+                                padding: 1% 2%;
+                                min-width: 40%;
+                                top:6%;
+                                opacity:0;
+                                // transition:1s;
+                                // transform-origin: left;
+                                color:white;
+                                margin: 0;
+                                text-align: right;
+                                
+                            }
+                            
+                            .position-name
+                            {
+                                margin-right: 0;
+                                position: absolute;
+                                width:60%;
+                                right: 0%;
+                                bottom: 0;
+                                padding: 1%;
+                                font-weight: 700;   
+                                // padding-left: 5%;
+                                background: $light-background;
+                                text-align: center;
+                                color: $dark-blue;
+                                opacity:0;
+                                // border-radius: 3px;
+                                &:after{
+                                    position: absolute;
+                                    left: -18%;
+                                    bottom:0%;
+                                    content: '';
+                                    width: 20%;
+                                    height: 100%;
+                                    background: linear-gradient(135deg,rgba(0,0,0,0) 50%, $light-background 50%);
+                                }
+                            }
+                            .ieee-logo{
+                                position:absolute;
+                                width:22%;
+                                height:22%;
+                                bottom:2%;
+                                left:2%;
+                                img{
+                                    width:100%;
+                                }
+                            }
+                        }
+                        .display-pic
+                        {
+                            display: flex;
+                            height: 100%;
+                            width:100%;
+                            clip-path: inset(0);
+                            position: absolute;
+                            flex-flow: column nowrap;
+                            z-index:0;
+                            img 
+                            {
+                                width:100%;
+                            }
+                        }
+                    }
+                    .inner-col:before{
+                        content: '';
+                        position: absolute;
+                        left: -7%;
+                        top: 1%;
+                        width: 2.5%;
+                        height: 100%;
+                        background: rgb(5, 48, 84);
+                        // background: linear-gradient(rgb(5,48,84) 0%,rgb(5,48,84) 80%,rgb(255,255,255) 80%,rgb(255,255,255) 97%,rgb(5,48,84) 97%)
+                    }
+                }
+            }.present-team-div-2
             {
                 position:relative;
                 display:flex;

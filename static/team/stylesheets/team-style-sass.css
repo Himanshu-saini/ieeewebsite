@@ -1,3 +1,99 @@
+@-webkit-keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translate(-100%, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@-moz-keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translate(-100%, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@-o-keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translate(-100%, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translate(-100%, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@-webkit-keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translate(100%, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@-moz-keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translate(100%, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@-o-keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translate(100%, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translate(100%, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@-webkit-keyframes fade-in-top {
+  0% {
+    opacity: 0;
+    transform: translate(0, -100%); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@-moz-keyframes fade-in-top {
+  0% {
+    opacity: 0;
+    transform: translate(0, -100%); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@-o-keyframes fade-in-top {
+  0% {
+    opacity: 0;
+    transform: translate(0, -100%); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@keyframes fade-in-top {
+  0% {
+    opacity: 0;
+    transform: translate(0, -100%); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
 body {
   margin: 0;
   padding: 0; }
@@ -76,7 +172,147 @@ body {
             background: white;
             color: white;
             box-shadow: -3px 4px 3px #0a625e; }
-            body .body-container .sub-division .present-team-div .member-col .inner-col .member-name {
+            body .body-container .sub-division .present-team-div .member-col .inner-col .overlay-content {
+              position: absolute;
+              left: 0;
+              z-index: 1;
+              width: 100%;
+              height: 100%;
+              font-size: .5em;
+              font-family: 'Righteous', cursive; }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .sub-division .present-team-div .member-col .inner-col .overlay-content {
+    font-size: 1em; } }
+              body .body-container .sub-division .present-team-div .member-col .inner-col .overlay-content:hover .ieee-name {
+                -webkit-animation: fade-in-top 1s ease forwards;
+                -moz-animation: fade-in-top 1s ease forwards;
+                -ms-animation: fade-in-top 1s ease forwards;
+                -o-animation: fade-in-top 1s ease forwards;
+                animation: fade-in-top 1s ease forwards; }
+              body .body-container .sub-division .present-team-div .member-col .inner-col .overlay-content:hover .member-name {
+                -webkit-animation: fade-in-left 1s ease forwards;
+                -moz-animation: fade-in-left 1s ease forwards;
+                -ms-animation: fade-in-left 1s ease forwards;
+                -o-animation: fade-in-left 1s ease forwards;
+                animation: fade-in-left 1s ease forwards; }
+              body .body-container .sub-division .present-team-div .member-col .inner-col .overlay-content:hover .position-name {
+                -webkit-animation: fade-in-right 1s ease forwards;
+                -moz-animation: fade-in-right 1s ease forwards;
+                -ms-animation: fade-in-right 1s ease forwards;
+                -o-animation: fade-in-right 1s ease forwards;
+                animation: fade-in-right 1s ease forwards; }
+              body .body-container .sub-division .present-team-div .member-col .inner-col .overlay-content .ieee-name {
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: .9em;
+                font-weight: 700;
+                padding: 1.5%;
+                color: #053054;
+                background: rgba(200, 200, 200, 0.9);
+                opacity: 0; }
+                body .body-container .sub-division .present-team-div .member-col .inner-col .overlay-content .ieee-name .vertical-text {
+                  writing-mode: vertical-lr;
+                  text-orientation: mixed;
+                  transform: rotate(180deg); }
+                body .body-container .sub-division .present-team-div .member-col .inner-col .overlay-content .ieee-name:before {
+                  position: absolute;
+                  right: 0%;
+                  bottom: -15%;
+                  content: '';
+                  width: 100%;
+                  height: 15%;
+                  background: linear-gradient(-45deg, rgba(0, 0, 0, 0) 50%, rgba(200, 200, 200, 0.9) 50%); }
+              body .body-container .sub-division .present-team-div .member-col .inner-col .overlay-content .member-name {
+                background: #053054;
+                position: absolute;
+                left: 9%;
+                padding: 1% 2%;
+                min-width: 40%;
+                top: 6%;
+                opacity: 0;
+                color: white;
+                margin: 0;
+                text-align: right; }
+              body .body-container .sub-division .present-team-div .member-col .inner-col .overlay-content .position-name {
+                margin-right: 0;
+                position: absolute;
+                width: 60%;
+                right: 0%;
+                bottom: 0;
+                padding: 1%;
+                font-weight: 700;
+                background: rgba(200, 200, 200, 0.9);
+                text-align: center;
+                color: #053054;
+                opacity: 0; }
+                body .body-container .sub-division .present-team-div .member-col .inner-col .overlay-content .position-name:after {
+                  position: absolute;
+                  left: -18%;
+                  bottom: 0%;
+                  content: '';
+                  width: 20%;
+                  height: 100%;
+                  background: linear-gradient(135deg, rgba(0, 0, 0, 0) 50%, rgba(200, 200, 200, 0.9) 50%); }
+              body .body-container .sub-division .present-team-div .member-col .inner-col .overlay-content .ieee-logo {
+                position: absolute;
+                width: 22%;
+                height: 22%;
+                bottom: 2%;
+                left: 2%; }
+                body .body-container .sub-division .present-team-div .member-col .inner-col .overlay-content .ieee-logo img {
+                  width: 100%; }
+            body .body-container .sub-division .present-team-div .member-col .inner-col .display-pic {
+              display: flex;
+              height: 100%;
+              width: 100%;
+              clip-path: inset(0);
+              position: absolute;
+              flex-flow: column nowrap;
+              z-index: 0; }
+              body .body-container .sub-division .present-team-div .member-col .inner-col .display-pic img {
+                width: 100%; }
+          body .body-container .sub-division .present-team-div .member-col .inner-col:before {
+            content: '';
+            position: absolute;
+            left: -7%;
+            top: 1%;
+            width: 2.5%;
+            height: 100%;
+            background: #053054; }
+      body .body-container .sub-division .present-team-div-2 {
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        width: 100%; }
+        body .body-container .sub-division .present-team-div-2 .member-col {
+          position: relative;
+          width: 40vw;
+          height: 40vw;
+          margin: 3% 4%;
+          border-radius: 5px; }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .sub-division .present-team-div-2 .member-col {
+    width: 21vw;
+    height: 21vw; } }
+          body .body-container .sub-division .present-team-div-2 .member-col .inner-col:hover .member-name {
+            left: -6%; }
+            body .body-container .sub-division .present-team-div-2 .member-col .inner-col:hover .member-name h1 {
+              transition: 1s;
+              left: 0; }
+          body .body-container .sub-division .present-team-div-2 .member-col .inner-col {
+            position: absolute;
+            width: 91%;
+            height: 91%;
+            right: -2%;
+            top: 4%;
+            background: white;
+            color: white;
+            box-shadow: -3px 4px 3px #0a625e; }
+            body .body-container .sub-division .present-team-div-2 .member-col .inner-col .member-name {
               background: #053054;
               position: absolute;
               left: -6%;
@@ -92,9 +328,9 @@ body {
               font-size: 1em; }
 
 @media only screen and (min-width: 600px) {
-  body .body-container .sub-division .present-team-div .member-col .inner-col .member-name {
+  body .body-container .sub-division .present-team-div-2 .member-col .inner-col .member-name {
     font-size: 1em; } }
-            body .body-container .sub-division .present-team-div .member-col .inner-col .member-name:bfore {
+            body .body-container .sub-division .present-team-div-2 .member-col .inner-col .member-name:bfore {
               content: '';
               position: absolute;
               left: -5%;
@@ -103,7 +339,7 @@ body {
               height: 130%;
               border-radius: 2px;
               background: #053054; }
-            body .body-container .sub-division .present-team-div .member-col .inner-col .position-name {
+            body .body-container .sub-division .present-team-div-2 .member-col .inner-col .position-name {
               margin-right: 0;
               position: absolute;
               right: -4%;
@@ -117,9 +353,9 @@ body {
               font-size: .7em; }
 
 @media only screen and (min-width: 600px) {
-  body .body-container .sub-division .present-team-div .member-col .inner-col .position-name {
+  body .body-container .sub-division .present-team-div-2 .member-col .inner-col .position-name {
     font-size: 1em; } }
-            body .body-container .sub-division .present-team-div .member-col .inner-col .position-name:before {
+            body .body-container .sub-division .present-team-div-2 .member-col .inner-col .position-name:before {
               position: absolute;
               left: -18%;
               top: 0%;
@@ -127,7 +363,7 @@ body {
               width: 20%;
               height: 50%;
               background: linear-gradient(45deg, rgba(0, 0, 0, 0) 50%, #053054 50%); }
-            body .body-container .sub-division .present-team-div .member-col .inner-col .position-name:after {
+            body .body-container .sub-division .present-team-div-2 .member-col .inner-col .position-name:after {
               position: absolute;
               left: -18%;
               bottom: 0%;
@@ -135,7 +371,7 @@ body {
               width: 20%;
               height: 50%;
               background: linear-gradient(135deg, rgba(0, 0, 0, 0) 50%, #053054 50%); }
-            body .body-container .sub-division .present-team-div .member-col .inner-col .display-pic {
+            body .body-container .sub-division .present-team-div-2 .member-col .inner-col .display-pic {
               display: flex;
               height: 100%;
               width: 100%;
@@ -143,9 +379,9 @@ body {
               position: absolute;
               flex-flow: column nowrap;
               z-index: 0; }
-              body .body-container .sub-division .present-team-div .member-col .inner-col .display-pic img {
+              body .body-container .sub-division .present-team-div-2 .member-col .inner-col .display-pic img {
                 width: 100%; }
-          body .body-container .sub-division .present-team-div .member-col .inner-col:before {
+          body .body-container .sub-division .present-team-div-2 .member-col .inner-col:before {
             content: '';
             position: absolute;
             left: -7%;

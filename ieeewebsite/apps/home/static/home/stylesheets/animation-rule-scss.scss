@@ -16,7 +16,7 @@
     }
 }
 
-@mixin animation_fun($str) {
+@mixin animation($str) {
     -webkit-animation: #{$str};
     -moz-animation: #{$str};
     -ms-animation: #{$str};
@@ -24,25 +24,6 @@
     animation: #{$str};      
 }
 
-@mixin animation ($delay, $duration, $animation, $direction: forward, $fillmode: fowards) {
-    -webkit-animation-delay: $delay;
-    -webkit-animation-duration: $duration;
-    -webkit-animation-name: $animation;
-    -webkit-animation-fill-mode: $fillmode;
-    -webkit-animation-direction: $direction;
-
-    -moz-animation-delay: $delay;
-    -moz-animation-duration: $duration;
-    -moz-animation-name: $animation;
-    -moz-animation-fill-mode: $fillmode;
-    -moz-animation-direction: $direction;
-
-    animation-delay: $delay;
-    animation-duration: $duration;
-    animation-name: $animation;
-    animation-fill-mode: $fillmode;
-    animation-direction: $direction;
-}
 
 // Slide in Left to Center
 @include keyframe(fade-in-left) {
@@ -63,6 +44,19 @@
     0% {
         opacity: 0;
         transform: translate(100%,0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+
+// Slide in top to Center
+@include keyframe(fade-in-top) {
+    0% {
+        opacity: 0;
+        transform: translate(0,-100%);
     }
 
     100% {
