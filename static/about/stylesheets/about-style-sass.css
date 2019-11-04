@@ -62,6 +62,38 @@
     opacity: 1;
     transform: translate(0, 0); } }
 
+@-webkit-keyframes fade-in-top {
+  0% {
+    opacity: 0;
+    transform: translate(0, -100%); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@-moz-keyframes fade-in-top {
+  0% {
+    opacity: 0;
+    transform: translate(0, -100%); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@-o-keyframes fade-in-top {
+  0% {
+    opacity: 0;
+    transform: translate(0, -100%); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@keyframes fade-in-top {
+  0% {
+    opacity: 0;
+    transform: translate(0, -100%); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
 body {
   margin: 0;
   padding: 0; }
@@ -76,21 +108,23 @@ body {
     body .body-container .body-column {
       position: relative;
       width: 100%;
-      min-height: 50vh;
       box-sizing: border-box; }
 
 @media only screen and (max-width: 600px) {
   body .body-container .body-column {
-    font-size: .5em; } }
+    font-size: .5em;
+    min-height: 50vh; } }
 
 @media only screen and (min-width: 600px) {
   body .body-container .body-column {
-    font-size: 1em; } }
+    font-size: 1em;
+    min-height: 50vh; } }
       body .body-container .body-column .center-heading-col {
         position: relative;
         font-size: 4em;
         place-self: center; }
       body .body-container .body-column .content-container {
+        grid-area: content-container;
         position: relative;
         padding: 10%;
         display: flex;
@@ -127,49 +161,67 @@ body {
           height: 100%;
           width: 100%; }
       body .body-container .body-column .image-grid-2 {
+        grid-area: image-grid;
         height: 70%;
         display: grid;
         grid-template-columns: 49% 49%;
         grid-column-gap: 2%;
         align-self: center; }
-        body .body-container .body-column .image-grid-2:nth-child(odd) .img-column {
-          -webkit-animation: fade-in-left 1.8s ease;
-          -moz-animation: fade-in-left 1.8s ease;
-          -ms-animation: fade-in-left 1.8s ease;
-          -o-animation: fade-in-left 1.8s ease;
-          animation: fade-in-left 1.8s ease; }
-          body .body-container .body-column .image-grid-2:nth-child(odd) .img-column:nth-child(1) {
-            height: 90%;
-            align-self: center; }
-        body .body-container .body-column .image-grid-2:nth-child(even) .img-column {
-          -webkit-animation: fade-in-right 1.8s ease;
-          -moz-animation: fade-in-right 1.8s ease;
-          -ms-animation: fade-in-right 1.8s ease;
-          -o-animation: fade-in-right 1.8s ease;
-          animation: fade-in-right 1.8s ease; }
-          body .body-container .body-column .image-grid-2:nth-child(even) .img-column:nth-child(2) {
-            height: 90%;
-            align-self: center; }
+      body .body-container .body-column:nth-child(even) .img-column {
+        -webkit-animation: fade-in-left 1.8s ease;
+        -moz-animation: fade-in-left 1.8s ease;
+        -ms-animation: fade-in-left 1.8s ease;
+        -o-animation: fade-in-left 1.8s ease;
+        animation: fade-in-left 1.8s ease; }
+        body .body-container .body-column:nth-child(even) .img-column:nth-child(1) {
+          height: 90%;
+          align-self: center; }
+      body .body-container .body-column:nth-child(even) .content-container {
+        justify-self: left;
+        text-align: left; }
+      body .body-container .body-column:nth-child(odd) .img-column {
+        -webkit-animation: fade-in-right 1.8s ease;
+        -moz-animation: fade-in-right 1.8s ease;
+        -ms-animation: fade-in-right 1.8s ease;
+        -o-animation: fade-in-right 1.8s ease;
+        animation: fade-in-right 1.8s ease; }
+        body .body-container .body-column:nth-child(odd) .img-column:nth-child(2) {
+          height: 90%;
+          align-self: center; }
+      body .body-container .body-column:nth-child(odd) .content-container {
+        justify-self: right;
+        text-align: right; }
     body .body-container .horizontal-grid-2 {
       display: grid;
       width: 80%;
       height: 70vh;
-      margin: auto;
-      grid-template-columns: 50% 50%; }
-      body .body-container .horizontal-grid-2 > div:nth-child(1) {
-        justify-self: right;
-        text-align: right; }
-      body .body-container .horizontal-grid-2 > div:nth-child(2) {
-        justify-self: left;
-        text-align: left; }
+      margin: auto; }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .horizontal-grid-2 {
+    grid-template-columns: 50% 50%; }
+    body .body-container .horizontal-grid-2:nth-child(even) {
+      grid-template-areas: "image-grid content-container"; }
+    body .body-container .horizontal-grid-2:nth-child(odd) {
+      grid-template-areas: "content-container image-grid "; } }
+
+@media only screen and (max-width: 600px) {
+  body .body-container .horizontal-grid-2 {
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "image-grid" "content-container"; } }
     body .body-container .horizontal-grid-3 {
       display: grid;
-      grid-template-columns: 40% 35% 25%;
       justify-content: center;
       grid-gap: 0; }
-    body .body-container .vertical-grid {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: flex-start; }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .horizontal-grid-3 {
+    grid-template-columns: 40% 35% 25%;
+    grid-template-areas: ". content-container ."; } }
+
+@media only screen and (max-width: 600px) {
+  body .body-container .horizontal-grid-3 {
+    grid-template-columns: 60% 40%;
+    grid-template-areas: ". ." "content-container content-container"; } }
 
 /*# sourceMappingURL=about-style-sass.css.map */
