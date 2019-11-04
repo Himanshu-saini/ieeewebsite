@@ -17,7 +17,7 @@ class Team(models.Model):
     SNo = models.IntegerField(help_text= "Serial Number Of Member Display",default=1)
     Member_Name = models.CharField(max_length = 30,help_text= "Name Of the Team Member")
     Member_Post = models.CharField(max_length = 30,help_text= "Position Of the Team Member")
-    Display_img = models.ImageField(upload_to="uploads/team/images/members", help_text = "Display image of the Team member",blank=True,null=True)
+    Display_img = models.ImageField(upload_to="team/members", help_text = "Display image of the Team member",blank=True,null=True)
     Session_start = models.IntegerField( default=current_year(),validators=[MinValueValidator(2015), max_value_current_year])
     Session_end =  models.IntegerField( default=Session_start)
 

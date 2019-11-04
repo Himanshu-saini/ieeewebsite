@@ -1,4 +1,4 @@
-{% extends  'base.html' %}
+{% extends  'basic/base.html' %}
 {% load static %}
 {% load sass_tags %}
 
@@ -48,7 +48,7 @@
                         {{ i.Member_Post }}
                     </div>
                     <div class="display-pic">
-                        <img src="{% static i.Display_img.url %}" />
+                        <img src="{{ i.Display_img.url }}" />
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                     <div class="member-col" >
                         <div class="member-info">
                             <div class="display-pic" >
-                                <img src="{% static 'team/images/members/webmaster3.jpg' %}" />
+                                <img src="/media/team/members/anubhav.jpg" />
                             </div>
                             <div class="member-name">
                                 <h3>Himanshu saini</h3>

@@ -1,0 +1,322 @@
+body {
+  margin: 0;
+  padding: 0; }
+  body .body-container {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    width: 100%; }
+    body .body-container .head-division {
+      position: relative;
+      width: 100%;
+      height: 15vh;
+      overflow: hidden; }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .head-division {
+    height: 25vh; } }
+      body .body-container .head-division .background-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1; }
+      body .body-container .head-division .div-heading {
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-content: center; }
+        body .body-container .head-division .div-heading h1 {
+          margin-top: 20%;
+          font-size: 2.5em; }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .head-division .div-heading h1 {
+    margin-top: 0;
+    font-size: 3.5em; } }
+    body .body-container .sub-division {
+      position: relative;
+      width: 100%;
+      margin: 2% 0;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start; }
+      body .body-container .sub-division .div-heading {
+        position: relative;
+        width: 100%; }
+        body .body-container .sub-division .div-heading h1 {
+          text-align: center;
+          font-size: 1.6em;
+          margin: 1%; }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .sub-division .div-heading h1 {
+    font-size: 2.4em; } }
+      body .body-container .sub-division .present-team-div {
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        width: 100%; }
+        body .body-container .sub-division .present-team-div .member-col {
+          position: relative;
+          width: 40vw;
+          height: 40vw;
+          margin: 3% 4%;
+          border-radius: 5px; }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .sub-division .present-team-div .member-col {
+    width: 21vw;
+    height: 21vw; } }
+          body .body-container .sub-division .present-team-div .member-col .inner-col:hover .member-name {
+            left: -6%; }
+            body .body-container .sub-division .present-team-div .member-col .inner-col:hover .member-name h1 {
+              transition: 1s;
+              left: 0; }
+          body .body-container .sub-division .present-team-div .member-col .inner-col {
+            position: absolute;
+            width: 91%;
+            height: 91%;
+            right: -2%;
+            top: 4%;
+            background: white;
+            color: white;
+            box-shadow: -3px 4px 3px #0a625e; }
+            body .body-container .sub-division .present-team-div .member-col .inner-col .member-name {
+              background: #053054;
+              min-height: 15%;
+              position: absolute;
+              left: -6%;
+              padding: 3% 5%;
+              min-width: 50%;
+              bottom: 3%;
+              z-index: 1;
+              transition: 1s;
+              transform-origin: left; }
+              body .body-container .sub-division .present-team-div .member-col .inner-col .member-name h1 {
+                color: white;
+                float: right;
+                margin: 0;
+                font-size: 1em; }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .sub-division .present-team-div .member-col .inner-col .member-name h1 {
+    font-size: 1.5em; } }
+            body .body-container .sub-division .present-team-div .member-col .inner-col .member-name:bfore {
+              content: '';
+              position: absolute;
+              left: -5%;
+              top: -15%;
+              width: 2.5%;
+              height: 130%;
+              border-radius: 2px;
+              background: #053054; }
+            body .body-container .sub-division .present-team-div .member-col .inner-col .position-name {
+              margin-right: 0;
+              position: absolute;
+              right: -4%;
+              top: 2%;
+              padding: 1%;
+              padding-left: 5%;
+              background: #053054;
+              font-weight: bolder;
+              color: white;
+              border-radius: 3px;
+              z-index: 1;
+              font-size: .7em; }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .sub-division .present-team-div .member-col .inner-col .position-name {
+    font-size: 1em; } }
+            body .body-container .sub-division .present-team-div .member-col .inner-col .position-name:before {
+              position: absolute;
+              left: -18%;
+              top: 0%;
+              content: '';
+              width: 20%;
+              height: 50%;
+              background: linear-gradient(45deg, rgba(0, 0, 0, 0) 50%, #053054 50%); }
+            body .body-container .sub-division .present-team-div .member-col .inner-col .position-name:after {
+              position: absolute;
+              left: -18%;
+              bottom: 0%;
+              content: '';
+              width: 20%;
+              height: 50%;
+              background: linear-gradient(135deg, rgba(0, 0, 0, 0) 50%, #053054 50%); }
+            body .body-container .sub-division .present-team-div .member-col .inner-col .display-pic {
+              display: flex;
+              height: 100%;
+              width: 100%;
+              clip-path: inset(0);
+              position: absolute;
+              flex-flow: column nowrap;
+              z-index: 0; }
+              body .body-container .sub-division .present-team-div .member-col .inner-col .display-pic img {
+                width: 100%; }
+          body .body-container .sub-division .present-team-div .member-col .inner-col:before {
+            content: '';
+            position: absolute;
+            left: -7%;
+            top: 1%;
+            width: 2.5%;
+            height: 100%;
+            background: #053054; }
+      body .body-container .sub-division .prev-team {
+        position: relative;
+        width: 100%;
+        height: 38vh;
+        margin: 2% 0;
+        overflow: hidden; }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .sub-division .prev-team {
+    height: 70vh; } }
+        body .body-container .sub-division .prev-team .inner-wrapper {
+          display: flex;
+          flex-flow: row nowrap;
+          overflow-y: hidden;
+          overflow-x: scroll;
+          position: absolute;
+          width: 100%;
+          height: 100%; }
+          body .body-container .sub-division .prev-team .inner-wrapper .team-div {
+            position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+            min-width: 100%;
+            height: 100%;
+            padding: 0 15%; }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .sub-division .prev-team .inner-wrapper .team-div {
+    padding: 0 15%; } }
+            body .body-container .sub-division .prev-team .inner-wrapper .team-div .session-col {
+              position: relative;
+              margin: 2% auto; }
+              body .body-container .sub-division .prev-team .inner-wrapper .team-div .session-col h2 {
+                font-size: 1.2em;
+                margin: 0 auto; }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .sub-division .prev-team .inner-wrapper .team-div .session-col h2 {
+    font-size: 1.8em; } }
+            body .body-container .sub-division .prev-team .inner-wrapper .team-div .member-container {
+              position: relative;
+              display: flex;
+              flex-flow: row wrap;
+              width: 100%;
+              height: 100%;
+              justify-content: center;
+              align-content: center; }
+              body .body-container .sub-division .prev-team .inner-wrapper .team-div .member-container .member-col {
+                z-index: 0;
+                width: 12vw;
+                height: 12vw;
+                margin: .5vw 1vw;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer; }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .sub-division .prev-team .inner-wrapper .team-div .member-container .member-col {
+    width: 8vw;
+    height: 8vw;
+    margin: .5vw; } }
+                body .body-container .sub-division .prev-team .inner-wrapper .team-div .member-container .member-col .member-info {
+                  position: absolute;
+                  width: 8vw;
+                  height: 8vw;
+                  margin: 5%;
+                  z-index: 1;
+                  display: flex;
+                  flex-flow: column nowrap; }
+                  body .body-container .sub-division .prev-team .inner-wrapper .team-div .member-container .member-col .member-info .display-pic {
+                    position: relative;
+                    min-width: 7.2vw;
+                    min-height: 7.2vw;
+                    overflow: hidden;
+                    border-radius: 50%; }
+                    body .body-container .sub-division .prev-team .inner-wrapper .team-div .member-container .member-col .member-info .display-pic img {
+                      width: 100%; }
+                  body .body-container .sub-division .prev-team .inner-wrapper .team-div .member-container .member-col .member-info .member-name {
+                    position: relative;
+                    width: 100%; }
+              body .body-container .sub-division .prev-team .inner-wrapper .team-div .member-container .member-col:hover {
+                transform-origin: 50% 0;
+                transition: .5s;
+                transform: scale(1.1, 1.5);
+                z-index: 1;
+                box-shadow: 0 0 10px black; }
+                body .body-container .sub-division .prev-team .inner-wrapper .team-div .member-container .member-col:hover .display-pic::before {
+                  content: '';
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  z-index: 1; }
+          body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 {
+            position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+            min-width: 100%;
+            height: 100%;
+            padding: 0 15%; }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 {
+    padding: 0 10%; } }
+            body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 .session-col {
+              position: relative;
+              margin: 2% auto; }
+              body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 .session-col h2 {
+                font-size: 1.2em;
+                margin: 0 auto; }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 .session-col h2 {
+    font-size: 1.8em; } }
+            body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 .member-container {
+              position: relative;
+              display: flex;
+              top: 5%;
+              flex-flow: row wrap;
+              width: 100%;
+              height: 100%;
+              align-content: center; }
+              body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 .member-container .member-col {
+                width: 20vw;
+                height: 20vw;
+                margin: .5vw 1vw;
+                transition: .5s;
+                position: relative;
+                cursor: pointer; }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 .member-container .member-col {
+    width: 12vw;
+    height: 10vw;
+    margin: 0 1vw;
+    top: 0; } }
+                body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 .member-container .member-col .display-pic {
+                  transform-origin: 50% -10%;
+                  position: absolute;
+                  width: 100%;
+                  height: 150%;
+                  bottom: 0; }
+                  body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 .member-container .member-col .display-pic img {
+                    width: 100%; }
+              body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 .member-container .member-col:hover {
+                transform: scale(1.1);
+                z-index: 100; }
+                body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 .member-container .member-col:hover .display-pic::before {
+                  content: '';
+                  position: absolute;
+                  width: 100%;
+                  height: 100%; }
+        body .body-container .sub-division .prev-team .inner-wrapper::-webkit-scrollbar {
+          width: 0 !important; }
+
+/*# sourceMappingURL=team-style-sass.css.map */

@@ -122,8 +122,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')   # Directory in which files are stored
+MEDIA_URL = '/media/'                          # URL which is used to access files from MEDIA_DIR
+
 STATIC_URL = '/static/'
-STATIC_ROOT = " "
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'/ieeewebsite/apps/home/static'),
     os.path.join(BASE_DIR,'/ieeewebsite/apps/about/static'),
@@ -135,6 +138,7 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'sass_processor.finders.CssFinder',
 ]
-# SASS_PROCESSOR_URL = "/static/"
-SASS_PROCESSOR_ROOT = '/static/'
-
+SASS_PROCESSOR_URL = '/static/'
+SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR, 'static')
+SASS_PROCESSOR_INCLUDE_FILE_PATTERN = r'^.+\.scss$'    #include all '.scss' file present in static folder in the project
+SASS_PRECISION = 8                              #floating point precision for output css
