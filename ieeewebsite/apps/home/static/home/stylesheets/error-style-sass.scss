@@ -3,19 +3,28 @@ body{
     .body-container{
         margin:0;
         width:100%;
-        height:70vh;
         top:10vh;
         position:relative;
         display:grid;
-        grid-template-rows: 80% 15%;
         grid-template-columns: 50%;
         grid-row-gap: 5%;
+        @media only screen and (min-width:600px){
+            height:70vh;
+            grid-template-rows: 80% 15%;
+
+        }
+        @media only screen and (max-width:600px){
+            height:75vh;
+            grid-template-rows: 45% 25%;
+
+        }
         margin:auto;
         justify-content: center;
         font-family: 'Righteous', cursive;
         .image-container{
             // width:100%;
             height:100%;
+            
             justify-self: center;
             img{
                 height:100%;
@@ -37,6 +46,9 @@ body{
                     border:2px inset rgb(19, 177, 205);
                     border-radius: 4rem;
                     padding:5% 20%;
+                    @media only screen and (max-width:600px){
+                        font-size: .7em;
+                    }
                 }
                 .button:hover{
                     border:2px outset rgb(19, 177, 205);
