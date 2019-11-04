@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0; }
+  body .body-container {
+    width: 100%;
+    position: relative;
+    top: 8vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    font-family: 'Lato', sans-serif; }
+    body .body-container .body-column {
+      width: 100%;
+      min-height: 40vh;
+      box-sizing: border-box; }
+
+@media only screen and (max-width: 600px) {
+  body .body-container .body-column {
+    font-size: .5em; } }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .body-column {
+    font-size: 1em; } }
+      body .body-container .body-column .content-container {
+        position: relative;
+        width: 70%;
+        margin: auto;
+        padding: 7% 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        text-align: center; }
+        body .body-container .body-column .content-container .content-head {
+          width: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center; }
+          body .body-container .body-column .content-container .content-head p {
+            margin: 0 0 1rem 0; }
+        body .body-container .body-column .content-container .content {
+          line-height: 1.6;
+          font-size: 0.94em;
+          font-weight: 100;
+          width: 80%;
+          margin: auto;
+          color: #222324; }
+        body .body-container .body-column .content-container .small-text {
+          color: #13b1cd;
+          font-weight: 700;
+          font-size: 1.1em;
+          letter-spacing: .125rem;
+          line-height: 1.2; }
+        body .body-container .body-column .content-container .large-text {
+          font-size: 2.75em; }
+    body .body-container #fix-background-1 {
+      background: url("../images/backgrounds/07.jpg");
+      background-attachment: fixed; }
+      body .body-container #fix-background-1 .small-text {
+        color: #13c2e0; }
+      body .body-container #fix-background-1 .large-text {
+        color: white;
+        font-weight: 700; }
+
+/*# sourceMappingURL=home-style-sass.css.map */
