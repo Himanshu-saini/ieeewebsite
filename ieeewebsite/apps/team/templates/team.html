@@ -24,11 +24,21 @@
             {% for i in present_team %}
             <div class="member-col">
                 <div class="inner-col">
-                    <div class="member-name">
-                        {{ i.Member_Name }}
-                    </div>
-                    <div class="position-name">
-                        {{ i.Member_Post }}
+                    <div class="overlay-content">
+                        <div class="ieee-name">
+                            <div class="vertical-text">
+                                IEEE&nbspSTUDENT&nbspBRANCH&nbspJIIT
+                            </div>
+                        </div>
+                        <div class="member-name">
+                            {{ i.Member_Name }}
+                        </div>
+                        <div class="position-name">
+                            {{ i.Member_Post }}
+                        </div>
+                        <div class="ieee-logo">
+                            <img src="{% static '/home/images/logo/ieee.png' %}" />
+                        </div>
                     </div>
                     <div class="display-pic">
                         <img src="{{ i.Display_img.url }}" />
