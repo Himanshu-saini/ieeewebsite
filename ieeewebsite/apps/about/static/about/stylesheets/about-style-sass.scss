@@ -1,4 +1,6 @@
-@import "animation-rule-scss";
+
+@import 'animation-rule-scss';
+// @import '../../animation-rule-scss';
 
 body{
     margin:0;
@@ -87,8 +89,7 @@ body{
                 // transform:translate(100%,30%);
                 &:nth-child(odd){
                     .img-column{
-                        // animation: animation-slide-in-left 1s;
-                        @include animation(0, 1s, animation-slide-in-left, ease);
+                        @include animation(0, 1.8s, fade-in-left, ease);
                         &:nth-child(1){
                             height:90%;
                             align-self: center;
@@ -97,7 +98,7 @@ body{
                 }
                 &:nth-child(even){
                     .img-column{
-                        @include animation(0, 1s, animation-slide-in-right, ease);
+                        @include animation(0, 1.8s, fade-in-right, ease);
                         &:nth-child(2){
                         height:90%;
                         align-self: center;
