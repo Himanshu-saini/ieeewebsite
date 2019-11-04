@@ -1,0 +1,195 @@
+@-webkit-keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translate(-100%, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@-moz-keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translate(-100%, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@-o-keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translate(-100%, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translate(-100%, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@-webkit-keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translate(100%, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@-moz-keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translate(100%, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@-o-keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translate(100%, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translate(100%, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+body {
+  margin: 0;
+  padding: 0; }
+  body .body-container {
+    width: 100%;
+    position: relative;
+    top: 8vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    font-family: 'Lato', sans-serif; }
+    body .body-container .body-column {
+      position: relative;
+      width: 100%;
+      min-height: 50vh;
+      box-sizing: border-box; }
+
+@media only screen and (max-width: 600px) {
+  body .body-container .body-column {
+    font-size: .5em; } }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .body-column {
+    font-size: 1em; } }
+      body .body-container .body-column .center-heading-col {
+        position: relative;
+        font-size: 4em;
+        place-self: center; }
+      body .body-container .body-column .content-container {
+        position: relative;
+        padding: 10%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center; }
+        body .body-container .body-column .content-container .content-head {
+          width: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center; }
+          body .body-container .body-column .content-container .content-head p {
+            font-weight: 700;
+            margin: 0 0 1rem 0; }
+        body .body-container .body-column .content-container .small-heading {
+          color: #13b1cd;
+          font-weight: 700;
+          font-size: 1.1em;
+          letter-spacing: .125rem;
+          line-height: 1.2; }
+        body .body-container .body-column .content-container .large-heading {
+          font-size: 2.75em;
+          font-weight: 700; }
+        body .body-container .body-column .content-container .content {
+          line-height: 1.6;
+          font-size: 1.1em;
+          font-weight: 700;
+          width: 100%;
+          color: #222324; }
+          body .body-container .body-column .content-container .content p {
+            margin: 0 0 1rem 0; }
+      body .body-container .body-column .img-column {
+        height: 100%; }
+        body .body-container .body-column .img-column img {
+          height: 100%;
+          width: 100%; }
+      body .body-container .body-column .image-grid-2 {
+        height: 70%;
+        display: grid;
+        grid-template-columns: 49% 49%;
+        grid-column-gap: 2%;
+        align-self: center; }
+        body .body-container .body-column .image-grid-2:nth-child(odd) .img-column {
+          -webkit-animation-delay: 0;
+          -webkit-animation-duration: 1.8s;
+          -webkit-animation-name: fade-in-left;
+          -webkit-animation-fill-mode: fowards;
+          -webkit-animation-direction: ease;
+          -moz-animation-delay: 0;
+          -moz-animation-duration: 1.8s;
+          -moz-animation-name: fade-in-left;
+          -moz-animation-fill-mode: fowards;
+          -moz-animation-direction: ease;
+          animation-delay: 0;
+          animation-duration: 1.8s;
+          animation-name: fade-in-left;
+          animation-fill-mode: fowards;
+          animation-direction: ease; }
+          body .body-container .body-column .image-grid-2:nth-child(odd) .img-column:nth-child(1) {
+            height: 90%;
+            align-self: center; }
+        body .body-container .body-column .image-grid-2:nth-child(even) .img-column {
+          -webkit-animation-delay: 0;
+          -webkit-animation-duration: 1.8s;
+          -webkit-animation-name: fade-in-right;
+          -webkit-animation-fill-mode: fowards;
+          -webkit-animation-direction: ease;
+          -moz-animation-delay: 0;
+          -moz-animation-duration: 1.8s;
+          -moz-animation-name: fade-in-right;
+          -moz-animation-fill-mode: fowards;
+          -moz-animation-direction: ease;
+          animation-delay: 0;
+          animation-duration: 1.8s;
+          animation-name: fade-in-right;
+          animation-fill-mode: fowards;
+          animation-direction: ease; }
+          body .body-container .body-column .image-grid-2:nth-child(even) .img-column:nth-child(2) {
+            height: 90%;
+            align-self: center; }
+    body .body-container .horizontal-grid-2 {
+      display: grid;
+      width: 80%;
+      height: 70vh;
+      margin: auto;
+      grid-template-columns: 50% 50%; }
+      body .body-container .horizontal-grid-2 > div:nth-child(1) {
+        justify-self: right;
+        text-align: right; }
+      body .body-container .horizontal-grid-2 > div:nth-child(2) {
+        justify-self: left;
+        text-align: left; }
+    body .body-container .horizontal-grid-3 {
+      display: grid;
+      grid-template-columns: 40% 35% 25%;
+      justify-content: center;
+      grid-gap: 0; }
+    body .body-container .vertical-grid {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start; }
+
+/*# sourceMappingURL=about-style-sass.css.map */

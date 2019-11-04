@@ -1,4 +1,4 @@
-{% extends  'base.html' %}
+{% extends  'basic/base.html' %}
 {% load static %}
 {% load sass_tags %}
 
@@ -48,7 +48,7 @@
                         {{ i.Member_Post }}
                     </div>
                     <div class="display-pic">
-                        <img src="{% static i.Display_img.url %}" />
+                        <img src="{{  i.Display_img.url }}" />
                     </div>
                 </div>
             </div>
