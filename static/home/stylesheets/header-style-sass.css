@@ -20,6 +20,7 @@ header {
     justify-content: space-between; } }
   header #main-col {
     height: 100%;
+    margin-right: 10%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center; }
@@ -81,7 +82,7 @@ header {
         cursor: pointer;
         transition: .5s;
         flex-grow: 1;
-        padding: 0 2%;
+        padding: 0 3%;
         font-size: 1.5em;
         box-sizing: border-box; }
       header #nav-col #nav-list .nav-option:hover {

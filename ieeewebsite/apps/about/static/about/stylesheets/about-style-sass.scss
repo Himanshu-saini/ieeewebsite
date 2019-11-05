@@ -32,9 +32,11 @@ body{
                 grid-area:content-container;
                 position:relative;
                 padding:10%;
+                // width:100%;
                 display:flex;
                 flex-flow:column nowrap;
                 justify-content: center;
+
                 .content-head{
                     width:100%;
                     display:flex;
@@ -99,7 +101,7 @@ body{
                     text-align: left;
                 }
             }
-            &:nth-child(odd){
+            &:nth-child(2n+3){
                 .img-column{
                     @include animation(fade-in-right 1.8s ease);
                     &:nth-child(2){
@@ -117,7 +119,7 @@ body{
         .horizontal-grid-2{
             display:grid;
             width:80%;
-            height:70vh;
+            min-height:70vh;
             margin: auto;
             @media only screen and (min-width:600px){
                 grid-template-columns: 50% 50%;
