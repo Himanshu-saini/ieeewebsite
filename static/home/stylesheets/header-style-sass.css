@@ -107,7 +107,7 @@ header {
         display: block; }
     header #nav-col #nav-list {
       position: absolute;
-      right: -60%;
+      right: 0%;
       top: 100%;
       display: flex;
       flex-flow: column nowrap;
@@ -115,9 +115,10 @@ header {
       width: 60%;
       height: 100vh;
       background: #323232;
-      border: 2px double #0a0a0a;
+      border: 2.5px double #0a0a0a;
       box-shadow: -1px 0 2px #323232;
-      transition: .5s;
+      transition: .7s;
+      transform: translate(100%, 0%);
       transform-origin: 100% 0; }
       header #nav-col #nav-list .nav-option {
         text-decoration: none;
