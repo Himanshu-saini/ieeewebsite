@@ -19,6 +19,7 @@ header{
     
     #main-col{
         height:100%;
+        margin-right:10%;
         @media only screen and (min-width:600px){
             width:20%;
         }
@@ -30,7 +31,6 @@ header{
         justify-content: center;
         .logo-container{
             height:90%;
-            // background: radial-gradient(rgba(200,200,200,.5) 0%,rgba(10,10,10,.0) 70%);            
             img{
                 height:90%;
                 padding:10%;
@@ -81,7 +81,7 @@ header{
                     cursor :pointer;
                     transition:.5s;
                     flex-grow: 1;
-                    padding: 0 2%;
+                    padding: 0 3%;
                     font-size: 1.5em;
                     box-sizing: border-box;
                 }
