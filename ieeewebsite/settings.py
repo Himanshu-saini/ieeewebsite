@@ -128,10 +128,10 @@ MEDIA_URL = '/media/'                          # URL which is used to access fil
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR,'/ieeewebsite/apps/home/static'),
-    os.path.join(BASE_DIR,'/ieeewebsite/apps/about/static'),
-    os.path.join(BASE_DIR,'/ieeewebsite/apps/team/static'),
-    os.path.join(BASE_DIR,'/ieeewebsite/apps/events/static'),
+    os.path.join(BASE_DIR,'ieeewebsite/apps/home/static'),
+    os.path.join(BASE_DIR,'ieeewebsite/apps/about/static'),
+    os.path.join(BASE_DIR,'ieeewebsite/apps/team/static'),
+    os.path.join(BASE_DIR,'ieeewebsite/apps/events/static'),
 )
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
