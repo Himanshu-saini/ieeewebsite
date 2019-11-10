@@ -67,6 +67,8 @@ $sudo nginx -t
 
 restart Nginx:
 $sudo service nginx restart
+or
+$sudo systemctl restart nginx
 
 Step 4: install gunicorn
 
@@ -75,6 +77,8 @@ $pip install gunicorn
 Configure gunicorn 
 Method 1: 
 gunicorn --bind 0.0.0.0:8000 myproject.wsgi:application
+or
+gunicorn --daemon --workers 3 --bind unix:/home/ubuntu/gitrepo/ieeewebsite/ieeewebsite.sock ieeewebsite.wsgi
 
 Method 2: create a systemd service file for Gunicorn
 $nano /etc/systemd/system/gunicorn.service
@@ -90,6 +94,9 @@ ExecStart=/root/testproject/testprojectenv/bin/gunicorn --access-logfile - --wor
 [Install]
 WantedBy=multi-user.target
 
-systemctl start gunicorn
-systemctl enable gunicorn
-systemctl status gunicorn
+start gunicorn service:
+$systemctl start gunicorn
+$systemctl enable gunicorn
+
+check for any error:
+$systemctl status gunicorn
