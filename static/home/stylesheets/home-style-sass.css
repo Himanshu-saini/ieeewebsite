@@ -30,6 +30,7 @@ body {
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
+        align-items: center;
         text-align: center; }
         body .body-container .body-column .content-container .content-head {
           width: 100%;
@@ -53,11 +54,56 @@ body {
           line-height: 1.2; }
         body .body-container .body-column .content-container .large-text {
           font-size: 2.75em; }
+      body .body-container .body-column:nth-child(odd) .row-grid {
+        grid-template-areas: "content-col img-column"; }
+        body .body-container .body-column:nth-child(odd) .row-grid .content-container {
+          text-align: right;
+          align-items: flex-end; }
+      body .body-container .body-column:nth-child(even) .row-grid {
+        grid-template-areas: "img-column content-col"; }
+        body .body-container .body-column:nth-child(even) .row-grid .content-container {
+          text-align: left;
+          align-items: flex-start; }
+      body .body-container .body-column .row-grid {
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%; }
+        body .body-container .body-column .row-grid .content-container {
+          grid-area: content-col;
+          padding: 0;
+          height: 30%;
+          justify-content: space-around; }
+
+@media only screen and (max-width: 600px) {
+  body .body-container .body-column .row-grid .content-container {
+    font-size: .6em; } }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .body-column .row-grid .content-container {
+    font-size: 1em; } }
+          body .body-container .body-column .row-grid .content-container .large-text {
+            font-weight: 700; }
+          body .body-container .body-column .row-grid .content-container .link-button {
+            position: relative;
+            cursor: pointer;
+            align-self: right;
+            padding: 1% 2%;
+            font-size: 1.2em;
+            font-weight: 700;
+            transition: .5s;
+            border: 2px solid #0a0a0a; }
+            body .body-container .body-column .row-grid .content-container .link-button:hover {
+              background: #646464;
+              color: white;
+              border-color: #323232; }
+        body .body-container .body-column .row-grid .img-column {
+          grid-area: img-column; }
+          body .body-container .body-column .row-grid .img-column img {
+            width: 100%; }
     body .body-container #fix-background-1 {
       background: url("../images/backgrounds/07.jpg");
       background-attachment: fixed; }
-      body .body-container #fix-background-1 .small-text {
-        color: #13c2e0; }
       body .body-container #fix-background-1 .large-text {
         color: white;
         font-weight: 700; }

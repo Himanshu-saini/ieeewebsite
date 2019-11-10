@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 function ToSlideShow() {
     moveSlide(1);
-    setTimeout(ToSlideShow, 5000); // Change image every  3 seconds
+    setTimeout(ToSlideShow, 10000); // Change image every  10 seconds
 }
 function moveSlide(m){
     var row = document.getElementById("slide-id")
