@@ -12,7 +12,7 @@ Prerequisites:
 
 Download project using Git:
 $mkdir gitrepo
-$git clone <project link>
+$git clone <project-link>
 
 Step 1: Create virtual environment to run our project 
 Method 1: 
