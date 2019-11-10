@@ -39,7 +39,8 @@ $sudo nano /etc/nginx/sites-available/<projectname> //here projectname = 'ieeewe
 
 Type the following in file: 
 server {
-    listen 8000;
+    listen 80 default_server;
+    listen [::]:80 default_server ipv6only=on;
     server_name 0.0.0.0;
 
     location = /favicon.ico { access_log off; log_not_found off; }
@@ -59,8 +60,11 @@ server {
 
 * Adjust the paths such as /home/ubuntu/gitrepo/ieeewebsite to your own environment.
 
+remove(unlink) the default webpage of the nginx server:
+$sudo unlink /etc/nginx/sites-enabled/default
+
 enable this file by linking it to the sites-enabled folder:
-$sudo ln -s /etc/nginx/sites-available/myproject /etc/nginx/sites-enabled
+$sudo ln -s /etc/nginx/sites-available/ieeewebsite /etc/nginx/sites-enabled
 
 check if our configuration file was correctly written:
 $sudo nginx -t
