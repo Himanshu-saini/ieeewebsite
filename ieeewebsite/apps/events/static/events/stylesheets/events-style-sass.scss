@@ -3,130 +3,138 @@ body{
     padding:0;
     .body-container{
         position:relative;
+        top:8vh;
         width:100%;
-        padding:4% 0;
-        // background: rgb(80,80,80);
-        .heading{
+        font-family: 'Lato', sans-serif;
+        display: flex;
+        flex-flow: column nowrap;
+        .body-head{
             position:relative;
             width:100%;
-            padding:2%;
-            // background: rgb(10,10,10);
-            text-align: center;
-            h1{
-                // color: white;
-                font-size: 3em;
-                margin:auto;
+            display:grid;
+            grid-template-columns: 50% 50%;
+            // align-content: center;
+            justify-content: space-between;
+            
+            @media only screen and (max-width:600px){
+                font-size: .5em;
+                min-height:15vh;
+            }
+            @media only screen and (min-width:600px){
+                font-size: 1em;
+                min-height:40vh;
+            }
+            .heading-col{
+                position: relative;
+                display: grid;
+                align-content: center;
+                justify-content: end;
+                padding-right: 10%;
+                p{
+                    margin: 0;
+                    // text-align: center;
+                    font-size: 4em;;
+                    color:rgb(10,10,10);
+                }
+            }
+            .cover-img{
+                position: relative;;
+                width:100%;
+                height:100%;
+                img{
+                    width:100%;
+                }
             }
         }
-        .sub-container{
+        .body-column{
             position: relative;
             width:100%;
-            padding:2%;
-            padding-left:7%;
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: flex-start;
-            .sub-columns{
+            // margin: auto;
+            height: 90vh;
+            .event-grid{
                 position: relative;
-                display: flex;
-                flex-flow: column nowrap;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 60% 40%;
+                grid-template-areas: "main-col details"
+                                    "subevents subevents";
                 width:100%;
-                margin:2% 0;
-                .col-heading{
-                    position:relative;
+                height: 100%;
+                .main-col{
                     width:100%;
-                    margin:1% 0;
-                    h2{
-                        margin:0;
-                    }
-                }
-                .events-row{
+                    height:100%;
                     position: relative;
+                    margin:1%;
+                    background: rgb(100,100,100);
+                    grid-area: main-col;
+                    color:white;
+                    display:grid;
+                    align-content: center;
+                    justify-content: end;
+                    h1{
+                        font-size: 2em;
+                    }
+
+                }
+                .event-details{
                     width:100%;
-                    $height:15vw;
-                    // height : $height;
-                    padding:1% ;
-                    // max-height: $height;
-                    overflow:hidden;
-                    // background: linear-gradient(to bottom,rgb(200,200,200)40%,rgb(100,100,100) 80%,rgb(100,100,100) 84%,rgb(200,200,200));
-                    .inner-container{
-                        position: relative;
+                    height:100%;
+                    position: relative;
+                    margin:1%;
+                    // background: rgb(100,100,100);
+                    grid-area: details;
+                    // color:white;
+                    display:grid;
+                    align-content: center;
+                    justify-content: end;
+                    
+                }
+                .subevent-container{
+                    width:100%;
+                    height:100%;
+                    position: relative;
+                    margin:1%;
+                    grid-area: subevents;
+                    overflow: hidden;
+                    // color:white;
+                    .list-wrapper{
+                        position:absolute;
                         width:100%;
-                        padding:1%;
-                        height:105%;
+                        height:100%;
                         display:flex;
                         flex-flow: row nowrap;
+                        align-content: center;
                         justify-content: flex-start;
                         overflow-x: scroll;
-                        .events-col{
-                            position:relative;
-                            margin:.5%;
-                            min-width:33%;
-                            width:33%;
-                            height:15vw;
-                            border:1px solid rgb(200,200,200);
-                            // border-radius:5%;
-                            cursor:pointer;
-                            transition:.5s;
-                            .col-background{
-                                position:absolute;
-                                width:100%;
-                                height:100%;
-                                // transition: background-color 1s linear;
-                                // background: linear-gradient(to left,rgb(100,200,200),rgb(200,200,100));
-                                background-image: linear-gradient(to bottom, #30cfd0 0%, #330867 100%);
-                                z-index: 0;
-                            }
-                            .events-overlay{
-                                position: absolute;
-                                width:100%;
-                                height: 100%;
-                                padding:1%;
-                                .options{
-                                    position:absolute;
-                                    top:0;
-                                    right:0;
-                                    display:flex;
-                                    flex-flow:row nowrap;
-                                }
-                                .event-info{
-                                    position: absolute;
-                                    bottom:0;
-                                    left:0;
-                                    width:100%;
-                                    padding:4%;
-                                    display:flex;
-                                    flex-flow:column nowrap;
-                                    .event-name{
-                                        font-size: 2em;
-                                        // margin:1%;
-                                        color:rgb(250,250,250);
-                                    }
-                                    .event-date{
-                                        font-size: 1.2em;
-                                        color:rgb(200,200,200);
-                                    }
-                                }
-                            }
-                        }
-                        .events-col:hover{
-                            transform:scale(1.05);
-                            .col-background{
-                                // background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-                                background-color: black;
+                        overflow-y: hidden;
+                        .subevent-col{
+                            position: relative;
+                            width:32.5%;
+                            height:100%;
+                            margin:0 .5%;
+                            flex-shrink: 0;
+                            background: rgb(100,0,100);
+                            display: grid;
+                            place-content: center;
+                            // color:white;
+                            .name{
+                                // color:white;
+                                font-size: 2em;
                             }
                         }
                     }
+                    
+                    .list-wrapper::-webkit-scrollbar { 
+                        width: 0 !important ;
+                        background:rgba(100,100,100,0);
+                    }
                 }
-                .inner-container::-webkit-scrollbar { 
-                    width: 0 !important 
-                }
-            } 
+            }
         }
     }
 }
 
-html::-webkit-scrollbar { 
+// html::-webkit-scrollbar { 
     // width: 200px !important 
     // background:rgba(100,100,100,0);
-}
+// }

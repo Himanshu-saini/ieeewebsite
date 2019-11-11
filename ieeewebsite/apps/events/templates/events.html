@@ -1,4 +1,4 @@
-{% extends  'base.html' %}
+{% extends  'basic/base.html' %}
 {% load static %}
 {% load sass_tags %}
 
@@ -11,69 +11,48 @@
 
 {% block content %}
 <div class="body-container">
-    <div class="heading">
-        <h1>Events</h1>
+    <div class="body-head">
+        <div class="heading-col">
+            <p>Events</p>
+        </div>
+        <div class="cover-img">
+            <img src="{% static 'home/images/cover photo/cover5.jpg' %}" />
+        </div>
     </div>
-    <div class="sub-container">
-        <div class="sub-columns">
-            <div class="col-heading">
-                <h2>Upcoming Events</h2>
+    <div class="body-column">
+        <div class="event-grid">
+            <div class="main-col">
+                <h1>
+                    TECHBLOCKS 5.1
+                </h1>
             </div>
-            <div class="events-row">
-                <div class="inner-container">
-                    <div class="events-col">
-                        <div class="col-background"></div>
-                        <div class="events-overlay">
-                            <div class="options">
-                                <div class="like">
-                                    <img src="" />
-                                </div>
-                                <div class="share">
-                                    <img src="" />
-                                </div>
-                            </div>
-                            <div class="event-info">
-                                <div class="event-name">
-                                    Techblocks 5.2
-                                </div>
-                                <div class="event-date">
-                                    1-5 October,2019
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="events-details">
+                <div class="info">
+                    DATE: 12/12/12
                 </div>
             </div>
-        </div>
-        <div class="sub-columns">
-            <div class="col-heading">
-                <h2>Main Events</h2>
-            </div>
-            <div class="events-row">
-                <div class="inner-container">
-                    {% for i in Events %}
-                    <div class="events-col">
-                        <div class="col-background"></div>
-                        <div class="events-overlay">
-                            <div class="options">
-                                <div class="like">
-                                    <img src="" />
-                                </div>
-                                <div class="share">
-                                    <img src="" />
-                                </div>
-                            </div>
-                            <div class="event-info">
-                                <div class="event-name">
-                                    Techblocks 5.2
-                                </div>
-                                <div class="event-date">
-                                    1-5 October,2019
-                                </div>
-                            </div>
+            <div class="subevent-container">
+                <div class="list-wrapper">
+                    <div class="subevent-col">
+                        <div class="name">
+                            PYTHON
                         </div>
                     </div>
-                    {% endfor %}
+                    <div class="subevent-col">
+                        <div class="name">
+                            PYTHON
+                        </div>
+                    </div>
+                    <div class="subevent-col">
+                        <div class="name">
+                            PYTHON
+                        </div>
+                    </div>
+                    <div class="subevent-col">
+                        <div class="name">
+                            PYTHON
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
