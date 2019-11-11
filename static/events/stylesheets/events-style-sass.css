@@ -40,70 +40,86 @@ body {
         height: 100%; }
         body .body-container .body-head .cover-img img {
           width: 100%; }
-    body .body-container .body-column {
+    body .body-container .columns-wrapper {
       position: relative;
       width: 100%;
-      height: 90vh; }
-      body .body-container .body-column .event-grid {
+      min-height: 54vh; }
+      body .body-container .columns-wrapper:nth-child(even) .body-column .event-grid {
+        grid-template-areas: "main-col details" "subevents subevents"; }
+      body .body-container .columns-wrapper:nth-child(odd) .body-column {
+        right: 0;
+        float: right; }
+        body .body-container .columns-wrapper:nth-child(odd) .body-column .event-grid {
+          right: 0;
+          grid-template-areas: "details main-col" "subevents subevents"; }
+          body .body-container .columns-wrapper:nth-child(odd) .body-column .event-grid .main-col {
+            justify-content: start; }
+      body .body-container .columns-wrapper .body-column {
         position: relative;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 60% 40%;
-        grid-template-areas: "main-col details" "subevents subevents";
-        width: 100%;
-        height: 100%; }
-        body .body-container .body-column .event-grid .main-col {
-          width: 100%;
-          height: 100%;
-          position: relative;
-          margin: 1%;
-          background: #646464;
-          grid-area: main-col;
-          color: white;
+        width: 50%;
+        height: 54vh;
+        overflow: hidden;
+        transition: 1s; }
+        body .body-container .columns-wrapper .body-column .event-grid {
+          position: absolute;
           display: grid;
-          align-content: center;
-          justify-content: end; }
-          body .body-container .body-column .event-grid .main-col h1 {
-            font-size: 2em; }
-        body .body-container .body-column .event-grid .event-details {
-          width: 100%;
-          height: 100%;
-          position: relative;
-          margin: 1%;
-          grid-area: details;
-          display: grid;
-          align-content: center;
-          justify-content: end; }
-        body .body-container .body-column .event-grid .subevent-container {
-          width: 100%;
-          height: 100%;
-          position: relative;
-          margin: 1%;
-          grid-area: subevents;
-          overflow: hidden; }
-          body .body-container .body-column .event-grid .subevent-container .list-wrapper {
-            position: absolute;
+          grid-template-columns: 50% 50%;
+          grid-template-rows: 60% 40%;
+          width: 100vw;
+          height: 90vh;
+          box-sizing: border-box; }
+          body .body-container .columns-wrapper .body-column .event-grid .main-col {
             width: 100%;
             height: 100%;
-            display: flex;
-            flex-flow: row nowrap;
+            position: relative;
+            margin: 1%;
+            background: #646464;
+            grid-area: main-col;
+            color: white;
+            display: grid;
             align-content: center;
-            justify-content: flex-start;
-            overflow-x: scroll;
-            overflow-y: hidden; }
-            body .body-container .body-column .event-grid .subevent-container .list-wrapper .subevent-col {
-              position: relative;
-              width: 32.5%;
+            justify-content: end; }
+            body .body-container .columns-wrapper .body-column .event-grid .main-col h1 {
+              font-size: 2em; }
+          body .body-container .columns-wrapper .body-column .event-grid .event-details {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            margin: 1%;
+            grid-area: details;
+            display: grid;
+            align-content: center;
+            justify-content: end; }
+          body .body-container .columns-wrapper .body-column .event-grid .subevent-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            margin: 1%;
+            grid-area: subevents;
+            overflow: hidden; }
+            body .body-container .columns-wrapper .body-column .event-grid .subevent-container .list-wrapper {
+              position: absolute;
+              width: 100%;
               height: 100%;
-              margin: 0 .5%;
-              flex-shrink: 0;
-              background: #640064;
-              display: grid;
-              place-content: center; }
-              body .body-container .body-column .event-grid .subevent-container .list-wrapper .subevent-col .name {
-                font-size: 2em; }
-          body .body-container .body-column .event-grid .subevent-container .list-wrapper::-webkit-scrollbar {
-            width: 0 !important;
-            background: rgba(100, 100, 100, 0); }
+              display: flex;
+              flex-flow: row nowrap;
+              align-content: center;
+              justify-content: flex-start;
+              overflow-x: scroll;
+              overflow-y: hidden; }
+              body .body-container .columns-wrapper .body-column .event-grid .subevent-container .list-wrapper .subevent-col {
+                position: relative;
+                width: 32.5%;
+                height: 100%;
+                margin: 0 .5%;
+                flex-shrink: 0;
+                background: #640064;
+                display: grid;
+                place-content: center; }
+                body .body-container .columns-wrapper .body-column .event-grid .subevent-container .list-wrapper .subevent-col .name {
+                  font-size: 2em; }
+            body .body-container .columns-wrapper .body-column .event-grid .subevent-container .list-wrapper::-webkit-scrollbar {
+              width: 0 !important;
+              background: rgba(100, 100, 100, 0); }
 
 /*# sourceMappingURL=events-style-sass.css.map */

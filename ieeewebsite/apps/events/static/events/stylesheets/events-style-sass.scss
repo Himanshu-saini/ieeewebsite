@@ -24,6 +24,7 @@ body{
                 font-size: 1em;
                 min-height:40vh;
             }
+            
             .heading-col{
                 position: relative;
                 display: grid;
@@ -46,87 +47,116 @@ body{
                 }
             }
         }
-        .body-column{
+        $column-height:90vh;
+        .columns-wrapper{
             position: relative;
             width:100%;
-            // margin: auto;
-            height: 90vh;
-            .event-grid{
-                position: relative;
-                display: grid;
-                grid-template-columns: 50% 50%;
-                grid-template-rows: 60% 40%;
-                grid-template-areas: "main-col details"
-                                    "subevents subevents";
-                width:100%;
-                height: 100%;
-                .main-col{
-                    width:100%;
-                    height:100%;
-                    position: relative;
-                    margin:1%;
-                    background: rgb(100,100,100);
-                    grid-area: main-col;
-                    color:white;
-                    display:grid;
-                    align-content: center;
-                    justify-content: end;
-                    h1{
-                        font-size: 2em;
+            min-height:54vh;
+            &:nth-child(even){
+                .body-column{
+                    .event-grid{
+                        grid-template-areas: "main-col details"
+                        "subevents subevents";
                     }
-
                 }
-                .event-details{
-                    width:100%;
-                    height:100%;
-                    position: relative;
-                    margin:1%;
-                    // background: rgb(100,100,100);
-                    grid-area: details;
-                    // color:white;
-                    display:grid;
-                    align-content: center;
-                    justify-content: end;
-                    
-                }
-                .subevent-container{
-                    width:100%;
-                    height:100%;
-                    position: relative;
-                    margin:1%;
-                    grid-area: subevents;
-                    overflow: hidden;
-                    // color:white;
-                    .list-wrapper{
-                        position:absolute;
-                        width:100%;
-                        height:100%;
-                        display:flex;
-                        flex-flow: row nowrap;
-                        align-content: center;
-                        justify-content: flex-start;
-                        overflow-x: scroll;
-                        overflow-y: hidden;
-                        .subevent-col{
-                            position: relative;
-                            width:32.5%;
-                            height:100%;
-                            margin:0 .5%;
-                            flex-shrink: 0;
-                            background: rgb(100,0,100);
-                            display: grid;
-                            place-content: center;
-                            // color:white;
-                            .name{
-                                // color:white;
-                                font-size: 2em;
-                            }
+            }
+            &:nth-child(odd){
+                .body-column{
+                    right:0;
+                    float: right;
+                    .event-grid{
+                        right:0;
+                        grid-template-areas: "details main-col"
+                        "subevents subevents";
+                        .main-col{
+                            justify-content: start;
                         }
                     }
-                    
-                    .list-wrapper::-webkit-scrollbar { 
-                        width: 0 !important ;
-                        background:rgba(100,100,100,0);
+                }
+            }
+            .body-column{
+                position: relative;
+                width:50%;
+                // margin: auto;
+                height: $column-height*.6;
+                overflow: hidden;
+                transition:1s;
+                .event-grid{
+                    position: absolute;
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    grid-template-rows: 60% 40%;
+                    width:100vw;
+                    height:$column-height;
+                    box-sizing: border-box;
+                    .main-col{
+                        width:100%;
+                        height:100%;
+                        position: relative;
+                        margin:1%;
+                        background: rgb(100,100,100);
+                        grid-area: main-col;
+                        color:white;
+                        display:grid;
+                        align-content: center;
+                        justify-content: end;
+                        h1{
+                            font-size: 2em;
+                        }
+
+                    }
+                    .event-details{
+                        width:100%;
+                        height:100%;
+                        position: relative;
+                        margin:1%;
+                        // background: rgb(100,100,100);
+                        grid-area: details;
+                        // color:white;
+                        display:grid;
+                        align-content: center;
+                        justify-content: end;
+                        
+                    }
+                    .subevent-container{
+                        width:100%;
+                        height:100%;
+                        position: relative;
+                        margin:1%;
+                        grid-area: subevents;
+                        overflow: hidden;
+                        // color:white;
+                        .list-wrapper{
+                            position:absolute;
+                            width:100%;
+                            height:100%;
+                            display:flex;
+                            flex-flow: row nowrap;
+                            align-content: center;
+                            justify-content: flex-start;
+                            overflow-x: scroll;
+                            overflow-y: hidden;
+                            .subevent-col{
+                                position: relative;
+                                width:32.5%;
+                                height:100%;
+                                margin:0 .5%;
+                                flex-shrink: 0;
+                                background: rgb(100,0,100);
+                                display: grid;
+                                place-content: center;
+                                // color:white;
+                                .name{
+                                    // color:white;
+                                    font-size: 2em;
+                                }
+                            }
+                        }
+                        
+                        .list-wrapper::-webkit-scrollbar { 
+                            width: 0 !important ;
+                            background:rgba(100,100,100,0);
+                        }
                     }
                 }
             }
