@@ -42,7 +42,8 @@ body {
           width: 100%; }
     body .body-container .columns-wrapper {
       position: relative;
-      width: 100%;
+      width: 99%;
+      margin: auto;
       min-height: 54vh; }
       body .body-container .columns-wrapper:nth-child(even) .body-column .event-grid {
         grid-template-areas: "main-col details" "subevents subevents"; }
@@ -63,8 +64,9 @@ body {
         body .body-container .columns-wrapper .body-column .event-grid {
           position: absolute;
           display: grid;
-          grid-template-columns: 50% 50%;
-          grid-template-rows: 60% 40%;
+          grid-template-columns: 49% 49%;
+          grid-template-rows: 59.5% 40%;
+          grid-gap: .25rem;
           width: 100vw;
           height: 90vh;
           box-sizing: border-box; }
@@ -72,7 +74,6 @@ body {
             width: 100%;
             height: 100%;
             position: relative;
-            margin: 1%;
             background: #646464;
             grid-area: main-col;
             color: white;
@@ -85,7 +86,7 @@ body {
             width: 100%;
             height: 100%;
             position: relative;
-            margin: 1%;
+            background: #c8c8c8;
             grid-area: details;
             display: grid;
             align-content: center;
@@ -94,13 +95,12 @@ body {
             width: 100%;
             height: 100%;
             position: relative;
-            margin: 1%;
             grid-area: subevents;
             overflow: hidden; }
             body .body-container .columns-wrapper .body-column .event-grid .subevent-container .list-wrapper {
               position: absolute;
               width: 100%;
-              height: 100%;
+              height: 104%;
               display: flex;
               flex-flow: row nowrap;
               align-content: center;
@@ -111,7 +111,6 @@ body {
                 position: relative;
                 width: 32.5%;
                 height: 100%;
-                margin: 0 .5%;
                 flex-shrink: 0;
                 background: #640064;
                 display: grid;
