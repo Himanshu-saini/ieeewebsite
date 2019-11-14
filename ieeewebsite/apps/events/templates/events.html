@@ -27,18 +27,17 @@
             <div class="event-grid">
                 <div class="main-col" onclick="expand_column(this)">
                     <h1>
-                        TECHBLOCKS&nbsp5.1
+                        {{i.Event_Name}}
                     </h1>
                 </div>
                 <div class="event-details">
                     <div class="description">
-                        Data structures are the building blocks of programming. "smart data structures and dumb code work way better than the other way round " say many great coding geeks.
-
+                        {{i.Discription}}
                     </div>
                     <div class="details">
-                        DATE: 12/12/12<br>
-                        TIME: 5-7 PM<br>
-                        VENUE: G1 - G7
+                        DATE: {{i.Event_Date}}<br>
+                        TIME:{{i.Event_Time}}<br>
+                        Status: {{i.Event_status}}
                     </div>
                 </div>
                 <div class="subevent-container">
