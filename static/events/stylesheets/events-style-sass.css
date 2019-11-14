@@ -47,13 +47,17 @@ body {
       min-height: 54vh; }
       body .body-container .columns-wrapper:nth-child(even) .body-column .event-grid {
         grid-template-areas: "main-col details" "subevents subevents"; }
+        body .body-container .columns-wrapper:nth-child(even) .body-column .event-grid .event-details {
+          justify-content: start; }
       body .body-container .columns-wrapper:nth-child(odd) .body-column {
         float: right; }
         body .body-container .columns-wrapper:nth-child(odd) .body-column .event-grid {
           right: .25rem;
           grid-template-areas: "details main-col" "subevents subevents"; }
-          body .body-container .columns-wrapper:nth-child(odd) .body-column .event-grid .main-col {
-            justify-content: start; }
+          body .body-container .columns-wrapper:nth-child(odd) .body-column .event-grid .event-details {
+            justify-content: end; }
+            body .body-container .columns-wrapper:nth-child(odd) .body-column .event-grid .event-details .details {
+              text-align: right; }
       body .body-container .columns-wrapper .body-column {
         position: relative;
         width: 50%;
@@ -73,25 +77,35 @@ body {
             width: 100%;
             height: 100%;
             position: relative;
+            box-sizing: border-box;
             background: #646464;
             grid-area: main-col;
             color: white;
             display: grid;
-            align-content: center;
-            justify-content: end; }
+            cursor: pointer;
+            transition: .5s;
+            place-content: center; }
             body .body-container .columns-wrapper .body-column .event-grid .main-col h1 {
-              font-size: 2em; }
+              grid-area: heading;
+              transition: inherit;
+              font-size: 2.7em;
+              margin: 5% 10%; }
+            body .body-container .columns-wrapper .body-column .event-grid .main-col:hover {
+              background: #505050; }
+              body .body-container .columns-wrapper .body-column .event-grid .main-col:hover h1 {
+                font-size: 2.2em;
+                color: #e6e6e6; }
           body .body-container .columns-wrapper .body-column .event-grid .event-details {
             width: 100%;
             height: 100%;
             position: relative;
             background: #c8c8c8;
             grid-area: details;
+            box-sizing: border-box;
+            padding: 5%;
             display: grid;
-            align-content: center;
-            justify-content: end; }
-            body .body-container .columns-wrapper .body-column .event-grid .event-details .info {
-              font-size: 1.2em; }
+            align-content: space-around;
+            font-size: 1.2em; }
           body .body-container .columns-wrapper .body-column .event-grid .subevent-container {
             width: 100%;
             height: 100%;

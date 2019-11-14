@@ -58,6 +58,14 @@ body{
                     .event-grid{
                         grid-template-areas: "main-col details"
                         "subevents subevents";
+                        
+                        .main-col{
+                            // justify-content: end;
+                            // grid-template-areas: ". heading";
+                        }
+                        .event-details{
+                            justify-content: start;
+                        }
                     }
                 }
             }
@@ -70,7 +78,15 @@ body{
                         grid-template-areas: "details main-col"
                         "subevents subevents";
                         .main-col{
-                            justify-content: start;
+                            // justify-content: start;
+                            // grid-template-areas: "heading .";
+                        }
+                        .event-details{
+                            justify-content: end;
+                            .details{
+                                text-align: right;
+
+                            }
                         }
                     }
                 }
@@ -99,17 +115,31 @@ body{
                         height:100%;
                         position: relative;
                         // margin:1%;
+                        // padding:2%;
+                        box-sizing: border-box;
                         background: rgb(100,100,100);
                         grid-area: main-col;
                         color:white;
                         display:grid;
-                        align-content: center;
-                        justify-content: end;
+                        cursor: pointer;
+                        transition: .5s;
+                        place-content: center;
+                        // align-content: center;
                         h1{
-                            font-size: 2em;
+                            grid-area:heading;
+                            transition: inherit;
+                            font-size: 2.7em;
+                            margin:5% 10%;
                         }
-
+                        &:hover{
+                            background: rgb(80,80,80);
+                            h1{
+                                font-size:2.2em;
+                                color:rgb(230,230,230);
+                            }
+                        }
                     }
+                    
                     .event-details{
                         width:100%;
                         height:100%;
@@ -118,13 +148,14 @@ body{
                         background: rgb(200,200,200);
                         grid-area: details;
                         // color:white;
+                        box-sizing: border-box;
+                        padding:5%;
                         display:grid;
-                        align-content: center;
-                        justify-content: end;
-                        .info{
-                            font-size:1.2em;
+                        align-content: space-around;
+                        font-size:1.2em;
+                        .details{
+                            font-weight: 700;
                         }
-                        
                     }
                     .subevent-container{
                         width:100%;

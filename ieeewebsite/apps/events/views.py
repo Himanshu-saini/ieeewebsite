@@ -4,4 +4,4 @@ from django.http import HttpResponse, HttpResponseRedirect
 # Create your views here.
 
 def events(req):
-    return render(req,"events.html",{ 'title':'IEEE Events' })
+    return render(req,"events.html",{ 'title':'IEEE Events','events':range(3) })
