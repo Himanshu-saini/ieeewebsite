@@ -1,4 +1,4 @@
-{% extends  'base.html' %}
+{% extends  'basic/base.html' %}
 {% load static %}
 {% load sass_tags %}
 
@@ -7,77 +7,75 @@
 {% endblock title %}
 {% block contentstylesheet %}
 <link rel="stylesheet" type="text/css" href="{% sass_src  'events/stylesheets/events-style-sass.scss' %}?{% now 'jS S Y H:i' %}" />
+<script src="{% static 'events/javascripts/event-page.js' %}?{% now 'jS S Y H:i' %}"></script>
+
 {% endblock contentstylesheet %}
 
 {% block content %}
 <div class="body-container">
-    <div class="heading">
-        <h1>Events</h1>
-    </div>
-    <div class="sub-container">
-        <div class="sub-columns">
-            <div class="col-heading">
-                <h2>Upcoming Events</h2>
+    <div class="body-head">
+        <div class="heading-col">
+            <p>Events</p>
+            <hr>
+        </div>
+        <div class="scroll-container">
+            {% for i in mevents %}
+            <div class="scroll-columns">
+                <img src="{% static 'home/images/cover photo/cover5.jpg' %}" />
+                <div class="overlay">
+                    <p>TechBlocks 5.1</p>
+                </div>
             </div>
-            <div class="events-row">
-                <div class="inner-container">
-                    <div class="events-col">
-                        <div class="col-background"></div>
-                        <div class="events-overlay">
-                            <div class="options">
-                                <div class="like">
-                                    <img src="" />
-                                </div>
-                                <div class="share">
-                                    <img src="" />
-                                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% for i in events %}
+    <div class="columns-wrapper">
+        <div class="body-column">
+            <div class="event-grid">
+                <div class="main-col" onclick="expand_column(this)">
+                    <h1>
+                        {{i.Event_Name}}
+                    </h1>
+                </div>
+                <div class="event-details">
+                    <div class="description">
+                        {{i.Discription}}
+                    </div>
+                    <div class="details">
+                        DATE: {{i.Event_Date}}<br>
+                        TIME:{{i.Event_Time}}<br>
+                        Status: {{i.Event_status}}
+                    </div>
+                </div>
+                <div class="subevent-container">
+                    <div class="list-wrapper">
+                        <div class="subevent-col">
+                            <div class="name">
+                                PYTHON
                             </div>
-                            <div class="event-info">
-                                <div class="event-name">
-                                    Techblocks 5.2
-                                </div>
-                                <div class="event-date">
-                                    1-5 October,2019
-                                </div>
+                        </div>
+                        <div class="subevent-col">
+                            <div class="name">
+                                PYTHON
+                            </div>
+                        </div>
+                        <div class="subevent-col">
+                            <div class="name">
+                                PYTHON
+                            </div>
+                        </div>
+                        <div class="subevent-col">
+                            <div class="name">
+                                PYTHON
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="sub-columns">
-            <div class="col-heading">
-                <h2>Main Events</h2>
-            </div>
-            <div class="events-row">
-                <div class="inner-container">
-                    {% for i in Events %}
-                    <div class="events-col">
-                        <div class="col-background"></div>
-                        <div class="events-overlay">
-                            <div class="options">
-                                <div class="like">
-                                    <img src="" />
-                                </div>
-                                <div class="share">
-                                    <img src="" />
-                                </div>
-                            </div>
-                            <div class="event-info">
-                                <div class="event-name">
-                                    Techblocks 5.2
-                                </div>
-                                <div class="event-date">
-                                    1-5 October,2019
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
     </div>
+    {% endfor %}
 </div>
 
 <script src="{% static 'events/javascripts/team-div.js' %}?{% now 'jS S Y H:i' %}"></script>
