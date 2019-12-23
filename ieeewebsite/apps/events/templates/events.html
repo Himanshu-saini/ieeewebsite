@@ -16,9 +16,17 @@
     <div class="body-head">
         <div class="heading-col">
             <p>Events</p>
+            <hr>
         </div>
-        <div class="cover-img">
-            <img src="{% static 'home/images/cover photo/cover5.jpg' %}" />
+        <div class="scroll-container">
+            {% for i in mevents %}
+            <div class="scroll-columns">
+                <img src="{% static 'home/images/cover photo/cover5.jpg' %}" />
+                <div class="overlay">
+                    <p>TechBlocks 5.1</p>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </div>
     {% for i in events %}

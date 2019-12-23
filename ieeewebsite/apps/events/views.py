@@ -4,4 +4,4 @@ from .models import Event
 # Create your views here.
 
 def events(req):
-    return render(req,"events.html",{ 'title':'IEEE Events','events':list(Event.objects.all().order_by()) })
+    return render(req,"events.html",{ 'title':'IEEE Events','events':list(Event.objects.all().order_by()),'mevents':range(7) })
