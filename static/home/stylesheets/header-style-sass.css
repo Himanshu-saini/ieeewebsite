@@ -1,3 +1,8 @@
+.solid-nav {
+  background: #323232;
+  color: white;
+  transition: .7s; }
+
 header {
   margin: 0;
   width: 100%;
@@ -6,7 +11,8 @@ header {
   position: fixed;
   display: flex;
   flex-flow: row nowrap;
-  background: #323232;
+  background: rgba(50, 50, 50, 0);
+  color: white;
   z-index: 100; }
 
 @media only screen and (min-width: 600px) {
@@ -41,7 +47,7 @@ header {
     header #main-col .head-name {
       font-family: 'Open Sans', sans-serif;
       padding-left: .2em;
-      color: white;
+      color: inherit;
       display: grid;
       place-content: center;
       cursor: pointer; }
@@ -78,7 +84,7 @@ header {
         height: 100%;
         display: grid;
         place-content: end center;
-        color: white;
+        color: inherit;
         cursor: pointer;
         transition: .5s;
         flex-grow: 1;
@@ -123,7 +129,7 @@ header {
       transform-origin: 100% 0; }
       header #nav-col #nav-list .nav-option {
         text-decoration: none;
-        color: white;
+        color: inherit;
         padding: 5% 10%;
         width: 100%;
         font-size: 1.5em;
