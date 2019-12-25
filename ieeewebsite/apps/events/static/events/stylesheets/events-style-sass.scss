@@ -31,11 +31,10 @@ body{
                 display: flex;
                 flex-flow: column nowrap;
                 justify-content: flex-start;
-                // padding-right: 10%;
                 p{
                     margin: 0;
-                    // text-align: center;
-                    font-size: 2.5em;;
+                    font-size: 4em;
+                    // font-weight: bolder;
                     color:rgb(10,10,10);
                 }
                 hr{
@@ -44,7 +43,7 @@ body{
                     border:0;
                     margin:0;
                     margin-bottom: .6em;;
-                    background: linear-gradient(to right,rgba(100,100,100,1),rgba(250,250,250,.1));
+                    background: linear-gradient(to right,rgba(10,10,10,1),rgba(250,250,250,.1));
                 }
             }
             .scroll-container{
@@ -60,11 +59,11 @@ body{
                 
                 @media only screen and (max-width:$mobile-break){
                     // font-size: .5em;
-                    height:40vh;
+                    height:19vh;
                 }
                 @media only screen and (min-width:$mobile-break){
                     // font-size: 1em;
-                    height:60vh;
+                    height:43vh;
                 }
                 .scroll-columns{
                     position:relative;
@@ -75,14 +74,14 @@ body{
                     }
                     @media only screen and (min-width:$mobile-break){
                         // font-size: 1em;
-                        min-width:23%;
+                        min-width:32% ;
                     }
                     overflow:hidden;
-                    background: rgb(250,250,250);
+                    background: rgb(212, 188, 188);
                     margin-right:2%;
                     border-radius: .5em;
                     cursor: pointer;
-                    // transition:.5s;
+                    transition:.5s;
                     .overlay{
                         position: absolute;
                         display: grid;
@@ -91,20 +90,22 @@ body{
                         width:100%;
                         height:100%;
                         box-sizing: border-box;
-                        padding-bottom:4%;
+                        padding-bottom:3%;
                         z-index: 1;
                         p{
                             display:none;
-                            color:white;
-                            font-size: 1.6em;
+                            color:rgb(255, 254, 254);
+                            font-size: 2em;
                             margin:0;
+                            font-weight: bold;
                         }
                     }
                     img{
                         position:absolute;
                         width:100%;
+                        // left:-50%;
                         height:100%;
-                        // transition:.1s;
+                        transition:.4s;
                     }
                 }
                 
@@ -195,10 +196,17 @@ body{
                         transition: .5s;
                         place-content: center;
                         // align-content: center;
+                        img{
+                            position:absolute;
+                            width:100%;
+                            height:100%;
+                        }
                         h1{
+                            // position:absolute;
                             grid-area:heading;
                             transition: inherit;
                             font-size: 2.7em;
+                            z-index:1;
                             // margin:5% 10%;
                         }
                         &:hover{
