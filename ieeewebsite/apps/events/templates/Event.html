@@ -1,0 +1,70 @@
+{% extends  'basic/base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block contentstylesheet %}
+<link rel="stylesheet" type="text/css" href="{% sass_src  'events/stylesheets/event-style.scss' %}?{% now 'jS S Y H:i' %}" />
+<script src="{% static 'events/javascripts/event-page.js' %}?{% now 'jS S Y H:i' %}"></script>
+
+{% endblock contentstylesheet %}
+
+{% block content %}
+<div class="body-container">
+    <div class="timeline-wrapper">
+        <div class="heading">
+            <h1>Events Timeline</h1>
+            <hr>
+        </div>
+        <div class="timeline-container">
+            <div class="border-column">
+                <div class="sidecolumn">
+                    <div class="top-bar"></div>
+                </div>
+            </div>
+            {% for i in mevents %}
+            <div class="timeline-column">
+                <div class="sidecolumn">
+                    <div class="sidebar"></div>
+                    <div class="circle"></div>
+                </div>
+                <div class="event-name">
+                    Xenith
+                </div>
+                <div class="column-wrapper">
+                    <div class="info-columns">
+                        <div class="about">
+                            <p class="click-button">About</p>
+                        </div>
+                        <div class="events-list">
+                            <p class="click-button">Show Events</p>
+                        </div>
+                    </div>
+                    <div class="events-container">
+                        {% for i in mevents %}
+                        <div class="events-column">
+                            <img src="{% static 'events/images/poster/Techblocks_5.2_DSA.jpg' %}" />
+                            <div class="overlay">
+                                <p>TechBlocks 5.1</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+            </div>
+            {% endfor %}
+            <div class="border-column">
+                <div class="sidecolumn">
+                    <div class="bottom-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'events/javascripts/team-div.js' %}?{% now 'jS S Y H:i' %}"></script>
+
+{% endblock content %}

@@ -21,7 +21,7 @@
         <div class="scroll-container">
             {% for i in mevents %}
             <div class="scroll-columns">
-                <img src="{% static 'events/images/Techblocks 5.2 DS&A.jpg' %}" />
+                <img src="{% static 'events/images/poster/Techblocks_5.2_DSA.jpg' %}" />
                 <div class="overlay">
                     <p>TechBlocks 5.1</p>
                 </div>
@@ -31,17 +31,20 @@
     </div>
     {% for i in events %}
     <div class="columns-wrapper">
-        <div class="body-column">
+        <div class="event-column-list">
             <div class="event-grid">
                 <div class="main-col" onclick="expand_column(this)">
-                    <img src="{% static 'events/images/Techblocks 5.1.jpg' %}" />
-                <h1>
+                    <div class="event-name">
                         {{i.Event_Name}}
-                    </h1>
+                    </div>
+                    <div class="event-poster">
+                        <img src="{% static i.Display_img.name %}" />
+                    </div>
+                    
                 </div>
                 <div class="event-details">
                     <div class="description">
-                        {{i.Discription}}
+                        {{i.Details}}
                     </div>
                     <div class="details">
                         DATE: {{i.Event_Date}}<br>

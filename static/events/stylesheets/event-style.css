@@ -1,0 +1,187 @@
+body {
+  margin: 0;
+  padding: 0; }
+  body .body-container {
+    position: relative;
+    top: 10vh;
+    width: 100%;
+    font-family: 'Lato', sans-serif; }
+    body .body-container .timeline-wrapper {
+      position: relative;
+      display: flex;
+      flex-flow: column nowrap;
+      width: 100%;
+      padding: 1% 1% 1% 2%;
+      box-sizing: border-box; }
+      body .body-container .timeline-wrapper .heading {
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        margin: 1% 0 0 0; }
+        body .body-container .timeline-wrapper .heading h1 {
+          margin: 0;
+          font-size: 3.5em;
+          color: #0a0a0a; }
+        body .body-container .timeline-wrapper .heading hr {
+          width: 100%;
+          min-height: .2em;
+          border: 0;
+          margin: 0;
+          margin-bottom: .6em;
+          background: linear-gradient(to right, #0a0a0a, rgba(250, 250, 250, 0.1)); }
+      body .body-container .timeline-wrapper .timeline-container {
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        width: 100%; }
+        body .body-container .timeline-wrapper .timeline-container .border-column {
+          position: relative;
+          width: 100%;
+          min-height: 2vh; }
+          body .body-container .timeline-wrapper .timeline-container .border-column .sidecolumn {
+            position: absolute;
+            margin: 0 auto;
+            min-width: 4%;
+            min-height: 100%; }
+            body .body-container .timeline-wrapper .timeline-container .border-column .sidecolumn .top-bar {
+              position: absolute;
+              top: 0;
+              width: 20%;
+              min-height: 100%;
+              background: #c8c8c8;
+              margin: 0 40%;
+              border-radius: 50% 50% 0 0; }
+            body .body-container .timeline-wrapper .timeline-container .border-column .sidecolumn .bottom-bar {
+              position: absolute;
+              top: 0;
+              width: 20%;
+              min-height: 100%;
+              background: #c8c8c8;
+              margin: 0 40%;
+              border-radius: 0 0 50% 50%; }
+        body .body-container .timeline-wrapper .timeline-container .timeline-column {
+          position: relative;
+          display: grid;
+          grid-template-columns: 4% 96%;
+          grid-template-rows: 15% 85%;
+          grid-template-areas: "sidebar name" "sidebar events"; }
+          body .body-container .timeline-wrapper .timeline-container .timeline-column .sidecolumn {
+            position: relative;
+            grid-area: sidebar;
+            margin: 0 auto;
+            width: 100%;
+            height: 100%; }
+            body .body-container .timeline-wrapper .timeline-container .timeline-column .sidecolumn .sidebar {
+              position: absolute;
+              top: 0;
+              width: 20%;
+              min-height: 100%;
+              background: #c8c8c8;
+              margin: 0 40%; }
+            body .body-container .timeline-wrapper .timeline-container .timeline-column .sidecolumn .circle {
+              position: absolute;
+              top: 2%;
+              width: 3vw;
+              height: 3vw;
+              border-radius: 50%;
+              margin: 10%;
+              background: #646464; }
+          body .body-container .timeline-wrapper .timeline-container .timeline-column .event-name {
+            position: relative;
+            grid-area: name;
+            width: 100%;
+            min-height: 100%;
+            box-sizing: border-box;
+            padding-left: 1%;
+            color: #0a0a0a;
+            font-size: 3em;
+            font-weight: bold; }
+          body .body-container .timeline-wrapper .timeline-container .timeline-column .column-wrapper {
+            position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+            width: 98%;
+            margin: 1% 0;
+            box-sizing: border-box;
+            grid-area: events; }
+            body .body-container .timeline-wrapper .timeline-container .timeline-column .column-wrapper .info-columns {
+              position: relative;
+              display: flex;
+              flex-flow: row nowrap;
+              width: 98%;
+              margin: 1% 0;
+              box-sizing: border-box; }
+
+@media only screen and (max-width: 600px) {
+  body .body-container .timeline-wrapper .timeline-container .timeline-column .column-wrapper .info-columns {
+    height: 19vh; } }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .timeline-wrapper .timeline-container .timeline-column .column-wrapper .info-columns {
+    height: 35vh; } }
+            body .body-container .timeline-wrapper .timeline-container .timeline-column .column-wrapper .events-container {
+              position: relative;
+              display: flex;
+              flex-flow: row nowrap;
+              width: 98%;
+              margin: 1% 0;
+              box-sizing: border-box;
+              overflow-x: scroll;
+              overflow-y: hidden; }
+
+@media only screen and (max-width: 600px) {
+  body .body-container .timeline-wrapper .timeline-container .timeline-column .column-wrapper .events-container {
+    height: 19vh; } }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .timeline-wrapper .timeline-container .timeline-column .column-wrapper .events-container {
+    height: 35vh; } }
+              body .body-container .timeline-wrapper .timeline-container .timeline-column .column-wrapper .events-container .events-column {
+                position: relative;
+                overflow: hidden;
+                background: #d4bcbc;
+                margin-right: 2%;
+                border-radius: .5em;
+                cursor: pointer;
+                transition: .5s; }
+
+@media only screen and (max-width: 600px) {
+  body .body-container .timeline-wrapper .timeline-container .timeline-column .column-wrapper .events-container .events-column {
+    min-width: 48%; } }
+
+@media only screen and (min-width: 600px) {
+  body .body-container .timeline-wrapper .timeline-container .timeline-column .column-wrapper .events-container .events-column {
+    min-width: 32%; } }
+                body .body-container .timeline-wrapper .timeline-container .timeline-column .column-wrapper .events-container .events-column .overlay {
+                  position: absolute;
+                  display: grid;
+                  justify-content: center;
+                  align-content: end;
+                  width: 100%;
+                  height: 100%;
+                  box-sizing: border-box;
+                  padding-bottom: 3%;
+                  z-index: 1; }
+                  body .body-container .timeline-wrapper .timeline-container .timeline-column .column-wrapper .events-container .events-column .overlay p {
+                    display: none;
+                    color: #fffefe;
+                    font-size: 2em;
+                    margin: 0;
+                    font-weight: bold; }
+                body .body-container .timeline-wrapper .timeline-container .timeline-column .column-wrapper .events-container .events-column img {
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  transition: .4s; }
+                body .body-container .timeline-wrapper .timeline-container .timeline-column .column-wrapper .events-container .events-column:hover .overlay {
+                  background: linear-gradient(rgba(10, 10, 10, 0.6), rgba(255, 255, 255, 0) 15%, rgba(255, 255, 255, 0) 85%, rgba(10, 10, 10, 0.6)); }
+                  body .body-container .timeline-wrapper .timeline-container .timeline-column .column-wrapper .events-container .events-column:hover .overlay p {
+                    display: block; }
+                body .body-container .timeline-wrapper .timeline-container .timeline-column .column-wrapper .events-container .events-column:hover img {
+                  transform: scale(1.1); }
+          body .body-container .timeline-wrapper .timeline-container .timeline-column .events-container::-webkit-scrollbar {
+            height: 0px !important; }
+
+/*# sourceMappingURL=event-style.css.map */
