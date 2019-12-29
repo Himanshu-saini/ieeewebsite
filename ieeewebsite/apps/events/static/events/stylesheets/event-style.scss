@@ -1,0 +1,229 @@
+$mobile-break: 600px;
+body{
+    margin:0;
+    padding:0;
+    .body-container{
+        position:relative;
+        top:10vh;
+        width:100%;
+        font-family: 'Lato', sans-serif;
+        .timeline-wrapper{
+            position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+            width:100%;
+            padding:1% 1% 1% 2%;
+            box-sizing: border-box;
+            .heading{
+                position: relative;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: flex-start;
+                margin:1% 0 0 0;
+                h1{
+                    margin: 0;
+                    font-size: 3.5em;
+                    // font-weight: bolder;
+                    color:rgb(10,10,10);
+                }
+                hr{
+                    width:100%;
+                    min-height:.2em;
+                    border:0;
+                    margin:0;
+                    margin-bottom: .6em;;
+                    background: linear-gradient(to right,rgba(10,10,10,1),rgba(250,250,250,.1));
+                }
+            }
+            .timeline-container{
+                $sidebar-color:rgb(200,200,200);
+                position:relative;
+                display:flex;
+                flex-flow: column nowrap;
+                justify-content: flex-start;
+                width:100%;
+                .border-column{
+                    position:relative;
+                    width:100%;
+                    min-height:2vh;
+                    .sidecolumn{
+                        position: absolute;
+                        margin:0 auto;
+                        min-width:4%;
+                        min-height:100%;
+                        .top-bar{
+                            position:absolute;
+                            top:0;
+                            width:20%;
+                            min-height: 100%;
+                            background: $sidebar-color;
+                            margin: 0 40%;
+                            border-radius: 50% 50% 0 0;
+                        }
+                        .bottom-bar{
+                            position:absolute;
+                            top:0;
+                            width:20%;
+                            min-height: 100%;
+                            background: $sidebar-color;
+                            margin: 0 40%;
+                            border-radius: 0 0 50% 50%;
+                        }
+                    }
+                }
+                .timeline-column{
+                    position:relative;
+                    display: grid;
+                    grid-template-columns: 4% 96%;
+                    grid-template-rows: 15% 85%;
+                    // grid-gap: .25rem 1%;
+                    grid-template-areas: "sidebar name"
+                                        "sidebar events";
+                    
+                    .sidecolumn{
+                        position: relative;
+                        grid-area: sidebar;
+                        margin:0 auto;
+                        width:100%;
+                        height:100%;
+                        .sidebar{
+                            position:absolute;
+                            top:0;
+                            width:20%;
+                            min-height: 100%;
+                            background: $sidebar-color;
+                            margin: 0 40%;
+                        }
+                        .circle{
+                            $lenght:3vw;
+                            position: absolute;
+                            top:2%;
+                            // left:25%;
+                            width:$lenght;
+                            height:$lenght;
+                            border-radius: 50%;
+                            margin:10%;
+                            background: rgb(100,100,100);
+                        }
+                    }
+                    .event-name{
+                        position: relative;
+                        grid-area: name;
+                        width:100%;
+                        min-height: 100%;
+                        box-sizing: border-box;
+                        padding-left:1%;
+                        color:rgb(10,10,10);
+                        font-size: 3em;
+                        font-weight: bold;
+                    }
+                    .column-wrapper{
+                        position: relative;
+                        display:flex;
+                        flex-flow: column nowrap;
+                        width:98%;
+                        margin:1% 0;
+                        box-sizing: border-box;
+                        grid-area:events;
+
+                        .info-columns{
+                            position: relative;
+                            display:flex;
+                            flex-flow: row nowrap;
+                            width:98%;
+                            margin:1% 0;
+                            box-sizing: border-box;
+                            @media only screen and (max-width:$mobile-break){
+                                // font-size: .5em;
+                                height:19vh;
+                            }
+                            @media only screen and (min-width:$mobile-break){
+                                // font-size: 1em;
+                                height:35vh;
+                            }
+                            
+                        }
+                        .events-container{
+                            position: relative;
+                            display:flex;
+                            flex-flow: row nowrap;
+                            width:98%;
+                            margin:1% 0;
+                            box-sizing: border-box;
+                            overflow-x: scroll;
+                            overflow-y:hidden;
+                            
+                            @media only screen and (max-width:$mobile-break){
+                                // font-size: .5em;
+                                height:19vh;
+                            }
+                            @media only screen and (min-width:$mobile-break){
+                                // font-size: 1em;
+                                height:35vh;
+                            }
+                            .events-column{
+                                position:relative;
+                                
+                                @media only screen and (max-width:$mobile-break){
+                                    // font-size: .5em;
+                                    min-width:48%;
+                                }
+                                @media only screen and (min-width:$mobile-break){
+                                    // font-size: 1em;
+                                    min-width:32% ;
+                                }
+                                overflow:hidden;
+                                background: rgb(212, 188, 188);
+                                margin-right:2%;
+                                border-radius: .5em;
+                                cursor: pointer;
+                                transition:.5s;
+                                .overlay{
+                                    position: absolute;
+                                    display: grid;
+                                    justify-content: center;
+                                    align-content: end;
+                                    width:100%;
+                                    height:100%;
+                                    box-sizing: border-box;
+                                    padding-bottom:3%;
+                                    z-index: 1;
+                                    p{
+                                        display:none;
+                                        color:rgb(255, 254, 254);
+                                        font-size: 2em;
+                                        margin:0;
+                                        font-weight: bold;
+                                    }
+                                }
+                                img{
+                                    position:absolute;
+                                    width:100%;
+                                    // left:-50%;
+                                    height:100%;
+                                    transition:.4s;
+                                }
+                            
+                                &:hover{
+                                    .overlay{
+                                        background: linear-gradient(rgba(10,10,10,.6),rgba(255,255,255,0) 15%,rgba(255,255,255,0) 85%,rgba(10,10,10,.6));
+                                        p{
+                                            display: block;
+                                        }
+                                    }
+                                    img{
+                                        transform:scale(1.1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    .events-container::-webkit-scrollbar {
+                        height:0px !important; 
+                    }
+                }
+            }
+        }
+    }
+}
