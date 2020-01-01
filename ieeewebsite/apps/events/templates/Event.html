@@ -13,54 +13,42 @@
 
 {% block content %}
 <div class="body-container">
-    <div class="timeline-wrapper">
-        <div class="heading">
-            <h1>Events Timeline</h1>
-            <hr>
-        </div>
-        <div class="timeline-container">
-            <div class="border-column">
-                <div class="sidecolumn">
-                    <div class="top-bar"></div>
-                </div>
-            </div>
-            {% for i in mevents %}
-            <div class="timeline-column">
-                <div class="sidecolumn">
-                    <div class="sidebar"></div>
-                    <div class="circle"></div>
-                </div>
-                <div class="event-name">
-                    Xenith
-                </div>
-                <div class="column-wrapper">
-                    <div class="info-columns">
-                        <div class="about">
-                            <p class="click-button">About</p>
-                        </div>
-                        <div class="events-list">
-                            <p class="click-button">Show Events</p>
-                        </div>
+    <div class="events-container">
+        <div class="events-list">
+            {% for i in events %}
+            <div class="event-column">
+                <div class="info-wrapper">
+                    <div class="event-name" onclick="showinfo(this)">
+                        <p>{{i.Event_Name}}</p>
                     </div>
-                    <div class="events-container">
-                        {% for i in mevents %}
-                        <div class="events-column">
-                            <img src="{% static 'events/images/poster/Techblocks_5.2_DSA.jpg' %}" />
-                            <div class="overlay">
-                                <p>TechBlocks 5.1</p>
+                    <div class="event-info">
+                        <div class="event-desc">
+                            {{i.Details}}
+                        </div>
+                        <div class="event-details">
+                            <div class="info">
+                                <div class="info-name">Date:</div>
+                                <div class="data">{{i.Event_Date}}</div>
+                            </div>
+                            <div class="info">
+                                <div class="info-name">Time:</div>
+                                <div class="data">{{i.Event_Time}}</div>
                             </div>
                         </div>
-                        {% endfor %}
+                        <div class="subevents-container">
+                            {% for i in mevents %}
+                            <div class="subevents-column">
+                                <img src="{% static 'events/images/poster/Techblocks_5.2_DSA.jpg' %}" />
+                                <div class="overlay">
+                                    <p>TechBlocks 5.1</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
-                
             </div>
             {% endfor %}
-            <div class="border-column">
-                <div class="sidecolumn">
-                    <div class="bottom-bar"></div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
