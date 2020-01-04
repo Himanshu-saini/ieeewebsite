@@ -1,0 +1,58 @@
+{% extends  'basic/base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block contentstylesheet %}
+<link rel="stylesheet" type="text/css" href="{% sass_src  'events/stylesheets/event-style-2.scss' %}?{% now 'jS S Y H:i' %}" />
+<script src="{% static 'events/javascripts/event-page.js' %}?{% now 'jS S Y H:i' %}"></script>
+
+{% endblock contentstylesheet %}
+
+{% block content %}
+<div class="body-container">
+    <div class="events-container">
+        <div class="events-list">
+            {% for i in events %}
+            <div class="event-column">
+                <div class="info-wrapper">
+                    <div class="event-name" onclick="showinfo(this)">
+                        <p>{{i.Event_Name}}</p>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-desc">
+                            {{i.Details}}
+                        </div>
+                        <div class="event-details">
+                            <div class="info">
+                                <div class="info-name">Date:</div>
+                                <div class="data">{{i.Event_Date}}</div>
+                            </div>
+                            <div class="info">
+                                <div class="info-name">Time:</div>
+                                <div class="data">{{i.Event_Time}}</div>
+                            </div>
+                        </div>
+                        <div class="subevents-container">
+                            {% for i in mevents %}
+                            <div class="subevents-column">
+                                <img src="{% static 'events/images/poster/Techblocks_5.2_DSA.jpg' %}" />
+                                <div class="overlay">
+                                    <p>TechBlocks 5.1</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'events/javascripts/team-div.js' %}?{% now 'jS S Y H:i' %}"></script>
+
+{% endblock content %}
