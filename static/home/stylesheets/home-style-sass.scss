@@ -1,0 +1,137 @@
+body{
+    margin:0;
+    padding:0;
+    .body-container{
+        width:100%;
+        position:relative;
+        // top:8vh;
+        display:flex;
+        flex-flow:column nowrap;
+        justify-content: flex-start;
+        font-family: 'Lato', sans-serif;
+        .body-column{
+            width:100%;
+            box-sizing: border-box;
+            
+            @media only screen and (max-width:600px){
+                font-size: .5em;
+                min-height:15vh;
+            }
+            @media only screen and (min-width:600px){
+                font-size: 1em;
+                min-height:40vh;
+            }
+            .content-container{
+                position:relative;
+                width:70%;
+                margin:auto;
+                padding:7% 0;
+                display:flex;
+                flex-flow:column nowrap;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                .content-head{
+                    width:100%;
+                    display:flex;
+                    flex-flow:column nowrap;
+                    justify-content: center;
+                    p{
+                        margin:0 0 1rem 0;
+                    }
+                }
+                .content{
+                    line-height: 1.6;
+                    font-size: 0.94em;
+                    font-weight: 100;
+                    width:80%;
+                    margin:auto;
+                    color:rgb(34, 35, 36);
+                }
+                .small-text{
+                    color:rgb(19, 177, 205);
+                    font-weight: 700;
+                    font-size: 1.1em;
+                    letter-spacing: .125rem;
+                    line-height: 1.2;
+
+                }
+                .large-text{
+                    font-size: 2.75em;
+                }
+            }
+            
+            &:nth-child(odd){
+                .row-grid{
+                    grid-template-areas: "content-col img-column";
+                    .content-container{
+                        text-align: right;
+                        align-items: flex-end;    
+                    }
+                }
+            }
+            &:nth-child(even){
+                .row-grid{
+                    grid-template-areas: "img-column content-col";
+                    .content-container{
+                        text-align: left;
+                        align-items: flex-start;    
+   
+                    }
+                }
+            }
+            .row-grid{
+                position: relative;
+                width:100%;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                .content-container{
+                    @media only screen and (max-width:600px){
+                        font-size: .6em;
+                    }
+                    @media only screen and (min-width:600px){
+                        font-size: 1em;
+                    }
+                    grid-area:content-col;
+                    padding: 0;
+                    height:30%;
+                    justify-content: space-around;
+                    .large-text{
+                        font-weight: 700;
+                    }
+                    .link-button{
+                        position: relative;
+                        cursor: pointer;
+                        align-self: right;
+                        padding:1% 2%;
+                        font-size: 1.2em;
+                        font-weight: 700;
+                        transition: .5s;
+                        border: 2px solid rgb(10,10,10);
+                        &:hover{
+                            background: rgb(100,100,100);
+                            color:white;
+                            border-color: rgb(50,50,50);
+                            
+                        }
+                    }
+                }
+                .img-column{
+                    grid-area: img-column;
+                    img{
+                        width:100%;
+                        // height:100%;
+                    }
+                }
+            }
+        }
+        #fix-background-1{
+            background: url('../images/backgrounds/07.jpg');
+            background-attachment: fixed;
+            .large-text{
+                color:white;
+                font-weight: 700;
+            }
+        }
+    }
+}

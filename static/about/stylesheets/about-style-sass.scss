@@ -1,0 +1,160 @@
+@import 'home/stylesheets/animation-rule-scss';
+
+body{
+    margin:0;
+    padding:0;
+    .body-container{
+        width:100%;
+        position:relative;
+        top:8vh;
+        display:flex;
+        flex-flow:column nowrap;
+        justify-content: flex-start;
+        font-family: 'Lato', sans-serif;
+        .body-column{
+            position:relative;
+            width:100%;
+            box-sizing: border-box;
+            @media only screen and (max-width:600px){
+                font-size: .5em;
+                min-height:50vh;
+            }
+            @media only screen and (min-width:600px){
+                font-size: 1em;
+                min-height:50vh;
+            }
+            .center-heading-col{
+                position:relative;
+                font-size:4em;
+                place-self: center;
+            }
+            .content-container{
+                grid-area:content-container;
+                position:relative;
+                padding:10%;
+                // width:100%;
+                display:flex;
+                flex-flow:column nowrap;
+                justify-content: center;
+
+                .content-head{
+                    width:100%;
+                    display:flex;
+                    flex-flow:column nowrap;
+                    justify-content: center;
+                    p{
+                        font-weight: 700;
+                        margin:0 0 1rem 0;
+                    }
+                }
+                .small-heading{
+                    color:rgb(19, 177, 205);
+                    font-weight: 700;
+                    font-size: 1.1em;
+                    letter-spacing: .125rem;
+                    line-height: 1.2;
+
+                }
+                .large-heading{
+                    font-size: 2.75em;
+                    font-weight: 700;
+
+                }
+                .content{
+                    line-height: 1.6;
+                    font-size: 1.1em;
+                    font-weight: 700;
+                    width:100%;
+                    color:rgb(34, 35, 36);
+                    p{
+                        margin:0 0 1rem 0;
+                    }
+                }
+            }
+            .img-column{
+                height:100%;
+                img{
+                    height:100%;
+                    width: 100%;
+                }
+            }
+            
+            .image-grid-2{
+                grid-area: image-grid;
+                height:70%;
+                display:grid;
+                grid-template-columns: 49% 49%;
+                grid-column-gap: 2%;
+                align-self: center;
+            }
+            
+            &:nth-child(even){
+                .img-column{
+                    @include animation(fade-in-left 1.8s ease);
+                    &:nth-child(1){
+                        height:90%;
+                        align-self: center;
+                    }
+                }
+                .content-container{
+                    justify-self: left;
+                    text-align: left;
+                }
+            }
+            &:nth-child(2n+3){
+                .img-column{
+                    @include animation(fade-in-right 1.8s ease);
+                    &:nth-child(2){
+                    height:90%;
+                    align-self: center;
+                    }
+                }
+                .content-container{
+                    justify-self: right;
+                    text-align: right;
+                }
+            }
+        }
+        
+        .horizontal-grid-2{
+            display:grid;
+            width:80%;
+            min-height:70vh;
+            margin: auto;
+            @media only screen and (min-width:600px){
+                grid-template-columns: 50% 50%;
+                &:nth-child(even){
+                    grid-template-areas: "image-grid content-container";
+
+                }
+                &:nth-child(odd){
+                    grid-template-areas: "content-container image-grid ";
+
+                }
+            }
+            @media only screen and (max-width:600px){
+                grid-template-rows: 50% 50%;
+                grid-template-areas: "image-grid" "content-container";
+
+            }
+        }
+        .horizontal-grid-3{
+            display:grid;
+            @media only screen and (min-width:600px){
+                grid-template-columns: 40% 35% 25%;
+                grid-template-areas: ". content-container .";
+            }
+            @media only screen and (max-width:600px){
+                grid-template-columns: 60% 40%;
+                grid-template-areas: ". ." "content-container content-container";
+            }
+            justify-content: center;
+            grid-gap:0;
+        }
+        // .vertical-grid{
+        //     display:flex;
+        //     flex-flow:row nowrap;
+        //     justify-content: flex-start;
+        // }
+    }
+}
