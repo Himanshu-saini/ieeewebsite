@@ -1,0 +1,50 @@
+{% extends  'basic/base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block contentstylesheet %}
+<link rel="stylesheet" type="text/css" href="{% sass_src  'events/stylesheets/event-style-5.scss' %}?{% now 'jS S Y H:i' %}" />
+<script src="{% static 'events/javascripts/event-page.js' %}?{% now 'jS S Y H:i' %}"></script>
+
+{% endblock contentstylesheet %}
+
+{% block content %}
+<div class="body-container">
+    <div class="events-wrapper">
+        <div class="heading-container">
+            <div class="heading">Events</div>
+            <hr>
+        </div>
+        <div class="events-container">
+                {% for i in mevents %}
+                <div class="event-column">
+                    <div class="image-container">
+                        <img src="{% static 'events/images/poster/Techblocks_5.2_DSA.jpg' %}" />
+                    </div>
+                    <div class="event-details">
+                        <div class="heading-column">
+                            <div class="heading">
+                                ALGORITH AND DATA STRUCTURE
+                            </div>
+                            <hr>
+                            <div class="event-name">
+                                TECHBLOCKS 5.1
+                            </div>
+                        </div>
+                        <div class="more-details">
+                            <div class="detail-col">20 Sept</div>
+                            <hr>
+                            <div class="detail-col">5:00pm</div>
+                            <hr>
+                            <div class="detail-col">G9</div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}
