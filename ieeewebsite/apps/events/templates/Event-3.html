@@ -1,0 +1,63 @@
+{% extends  'basic/base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block contentstylesheet %}
+<link rel="stylesheet" type="text/css" href="{% sass_src  'events/stylesheets/event-style-3.scss' %}?{% now 'jS S Y H:i' %}" />
+<script src="{% static 'events/javascripts/event-page.js' %}?{% now 'jS S Y H:i' %}"></script>
+
+{% endblock contentstylesheet %}
+
+{% block content %}
+<div class="body-container">
+    <div class="columns-wrapper">
+        {% for i in events %}
+        <div class="body-columns">
+            <div class="column-header">
+                <div class="event-name">
+                    {{i.Event_Name}}
+                </div>
+                <div class="arrow-container">
+                    <div class="down-arrow">
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="info-column">
+                <div class="about-1">
+                    {{i.Details}}
+                </div>
+                <div class="about-2">
+                    <div class="info">
+                        <div class="info-name">Date:</div>
+                        <div class="data">{{i.Event_Date}}</div>
+                    </div>
+                    <div class="info">
+                        <div class="info-name">Time:</div>
+                        <div class="data">{{i.Event_Time}}</div>
+                    </div>
+                    <div class="info">
+                        <div class="info-name">Status:</div>
+                        <div class="data">{{i.Event_status}}</div>
+                    </div>
+                </div>
+                <div class="subevents-container">
+                    {% for i in mevents %}
+                    <div class="subevents-column">
+                        <img src="{% static 'events/images/poster/Techblocks_5.2_DSA.jpg' %}" />
+                        <div class="overlay">
+                            <p>TechBlocks 5.1</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

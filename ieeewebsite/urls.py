@@ -23,9 +23,7 @@ urlpatterns = [
     path('about',include("ieeewebsite.apps.about.urls")),
     path('team',include("ieeewebsite.apps.team.urls")),
     path('events',include("ieeewebsite.apps.events.urls")),
-    path('home',include("ieeewebsite.apps.home.urls")),
     path('',include("ieeewebsite.apps.home.urls")),
-
 ] 
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT) 
 urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

@@ -14,10 +14,10 @@
 <!--========== HEADER ==========-->
 <header class="head solid-nav" id="navbar">
     <div id="main-col">
-        <div class="logo-container" onclick="location.href='/home'">
+        <div class="logo-container" onclick="location.href='{% url 'home:index' %}'">
             <img src="{% static 'home/images/logo/ieee.png' %}" />
         </div>
-        <div class="head-name" onclick="location.href='/home'">
+        <div class="head-name" onclick="location.href='{% url 'home:index' %}'">
             IEEE&nbspSB&nbspJIIT
         </div>
     </div>
@@ -36,10 +36,10 @@
             </svg>
         </div>
         <div id="nav-list">
-            <a class="nav-option" href="/home">Home</a>
-            <!-- <a class="nav-option" href="/events">Events</a> -->
-            <a class="nav-option" href="/team">Team</a>
-            <a class="nav-option" href="/about">About&nbspUs</a>
+            <a class="nav-option" href="{% url 'home:index' %}">Home</a>
+            <a class="nav-option" href="{% url 'events:index' %}">Events</a>
+            <a class="nav-option" href="{% url 'team:index' %}">Team</a>
+            <a class="nav-option" href="{% url 'about:index' %}">About&nbspUs</a>
         </div>
     </div>
 </header>
