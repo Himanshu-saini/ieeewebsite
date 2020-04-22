@@ -19,6 +19,8 @@
             <hr>
         </div>
         <div class="events-container">
+            <div class="nav-arrow ">&#10094;</div>
+            <div class="scroll-container">
                 {% for i in mevents %}
                 <div class="event-column">
                     <div class="image-container">
@@ -41,9 +43,15 @@
                             <hr>
                             <div class="detail-col">G9</div>
                         </div>
+                        <div class="tags-list">
+                            <div class="tag">{{ "Classes"|upper }}</div>
+                            <div class="tag">{{ "Prize worth 1k"|upper }}</div>
+                        </div>
                     </div>
                 </div>
                 {% endfor %}
+            </div>
+            <div class="nav-arrow">&#10095;</div>
         </div>
     </div>
 </div>
