@@ -9,6 +9,8 @@ body{
         width:100%;
         min-height:80vh;
         padding-bottom:10vh;
+        display:flex;
+        flex-flow:column nowrap;
         font-family: 'Roboto', sans-serif;
         .events-wrapper{
             position:relative;
@@ -48,7 +50,6 @@ body{
                     width:100%;
                     display:flex;
                     flex-flow: row nowrap;
-                    // box-sizing: border-box;
                     padding:2% 3%;
                     overflow-x: scroll;
                     overflow-y:hidden;
