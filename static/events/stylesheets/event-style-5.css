@@ -8,6 +8,8 @@ body {
     width: 100%;
     min-height: 80vh;
     padding-bottom: 10vh;
+    display: flex;
+    flex-flow: column nowrap;
     font-family: 'Roboto', sans-serif; }
     body .body-container .events-wrapper {
       position: relative;

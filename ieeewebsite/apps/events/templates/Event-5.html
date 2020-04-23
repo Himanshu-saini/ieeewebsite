@@ -7,12 +7,15 @@
 {% endblock title %}
 {% block contentstylesheet %}
 <link rel="stylesheet" type="text/css" href="{% sass_src  'events/stylesheets/event-style-5.scss' %}?{% now 'jS S Y H:i' %}" />
+<link rel="stylesheet" type="text/css" href="{% sass_src  'events/stylesheets/slideshow2-style.scss' %}?{% now 'jS S Y H:i' %}" />
 <script src="{% static 'events/javascripts/event-page.js' %}?{% now 'jS S Y H:i' %}"></script>
+<script src="{% static 'events/javascripts/slideshow2-js.js' %}?{% now 'jS S Y H:i' %}"></script>
 
 {% endblock contentstylesheet %}
 
 {% block content %}
 <div class="body-container">
+    {% include 'slideshow2-container.html' %}
     <div class="events-wrapper">
         <div class="heading-container">
             <div class="heading">Events</div>
