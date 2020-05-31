@@ -1,0 +1,20 @@
+INFO 2020-05-31 21:32:09,488 autoreload 9976 7788 Watching for file changes with StatReloader
+INFO 2020-05-31 21:32:13,929 basehttp 9976 1664 "GET / HTTP/1.1" 200 10970
+INFO 2020-05-31 21:32:14,069 basehttp 9976 10676 "GET /static/home/stylesheets/header-style-sass.css?31st%20st%202020%2016:02 HTTP/1.1" 200 7128
+INFO 2020-05-31 21:32:14,081 basehttp 9976 1664 "GET /static/home/stylesheets/home-style-sass.css?31st%20st%202020%2016:02 HTTP/1.1" 200 7128
+INFO 2020-05-31 21:32:14,089 basehttp 9976 10340 "GET /static/home/stylesheets/slideshow-style-sass.css?31st%20st%202020%2016:02 HTTP/1.1" 200 7128
+INFO 2020-05-31 21:32:14,101 basehttp 9976 10388 "GET /static/home/javascripts/header-div.js?31st%20st%202020%2016:02 HTTP/1.1" 200 7128
+INFO 2020-05-31 21:32:14,113 basehttp 9976 10768 "GET /static/home/javascripts/slideshow-div.js?31st%20st%202020%2016:02 HTTP/1.1" 200 7128
+INFO 2020-05-31 21:32:14,121 basehttp 9976 6972 "GET /static/home/stylesheets/footer-style-sass.css?31st%20st%202020%2016:02 HTTP/1.1" 200 7128
+INFO 2020-05-31 21:32:14,391 basehttp 9976 6972 "GET /static/home/images/logo/ieee.png HTTP/1.1" 200 7128
+INFO 2020-05-31 21:32:22,672 basehttp 9976 11288 "GET / HTTP/1.1" 200 10970
+INFO 2020-05-31 21:32:22,740 basehttp 9976 11328 "GET /static/home/stylesheets/slideshow-style-sass.css?31st%20st%202020%2016:02 HTTP/1.1" 200 7128
+INFO 2020-05-31 21:32:22,744 basehttp 9976 11288 "GET /static/home/stylesheets/home-style-sass.css?31st%20st%202020%2016:02 HTTP/1.1" 200 7128
+INFO 2020-05-31 21:32:22,751 basehttp 9976 11344 "GET /static/home/stylesheets/header-style-sass.css?31st%20st%202020%2016:02 HTTP/1.1" 200 7128
+INFO 2020-05-31 21:32:22,755 basehttp 9976 11332 "GET /static/home/javascripts/header-div.js?31st%20st%202020%2016:02 HTTP/1.1" 200 7128
+INFO 2020-05-31 21:32:22,807 basehttp 9976 11332 "GET /static/home/javascripts/slideshow-div.js?31st%20st%202020%2016:02 HTTP/1.1" 200 7128
+INFO 2020-05-31 21:32:22,807 basehttp 9976 11344 "GET /static/home/stylesheets/footer-style-sass.css?31st%20st%202020%2016:02 HTTP/1.1" 200 7128
+INFO 2020-05-31 21:32:22,807 basehttp 9976 11328 "GET /static/home/images/logo/ieee.png HTTP/1.1" 200 7128
+INFO 2020-05-31 21:32:22,827 basehttp 9976 11328 "GET /static/home/stylesheets/footer-style-sass.css?31st%20st%202020%2016:02 HTTP/1.1" 200 7128
+INFO 2020-05-31 21:32:22,843 basehttp 9976 11328 "GET /static/home/images/logo/ieee.png HTTP/1.1" 200 7128
+INFO 2020-05-31 21:32:22,875 basehttp 9976 11328 "GET /static/home/images/logo/ieee.png HTTP/1.1" 200 7128
