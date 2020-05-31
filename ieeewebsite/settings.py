@@ -199,10 +199,12 @@ LOGGING = {
         }
     },
     'loggers': {
+        # accepting logs for django
         'django': {
             'handlers': ['console','file'],
             'propagate': True,
         },
+        # accepting logs for gunicorn
         'gunicorn': {
             'level': 'DEBUG',
             'handlers': ['gunicorn'],
