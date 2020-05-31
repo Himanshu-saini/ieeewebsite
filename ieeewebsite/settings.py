@@ -143,3 +143,65 @@ SASS_PROCESSOR_URL = '/static/'
 SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR, 'static')
 SASS_PROCESSOR_INCLUDE_FILE_PATTERN = r'^.+\.scss$'    #include all '.scss' file present in static folder in the project
 SASS_PRECISION = 8                              #floating point precision for output css
+
+# Configuring logging information
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'filters': {
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse',
+        }
+    },
+    'handlers': {
+        # print to console when DEBUG = True
+        'console': {
+            'level': 'DEBUG',
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+        # print to file when DEBUG = False
+        'file': {
+            'level': 'DEBUG',
+            'filters': ['require_debug_false'],
+            'class': 'logging.FileHandler',
+            'formatter': 'verbose',
+            'filename': './logs/debug.log'
+        },
+        # print to gunicorn logs when DEBUG = False
+        'gunicorn': {
+            'level': 'DEBUG',
+            'filters': ['require_debug_false'],
+            'class': 'logging.handlers.RotatingFileHandler',
+            'formatter': 'verbose',
+            'filename': './logs/gunicorn.errors',
+            'maxBytes': 1024 * 1024 * 10,  # 10 mb
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console','file'],
+            'propagate': True,
+        },
+        'gunicorn': {
+            'level': 'DEBUG',
+            'handlers': ['gunicorn'],
+            'propagate': True,
+        },
+    }
+}
