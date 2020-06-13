@@ -12,15 +12,14 @@ server {
     listen 80 default_server;
     listen [::]:80 default_server ipv6only=on;
     server_name 0.0.0.0;
-	root /home/ubuntu/ieeewebsite/;
 	access_log  /var/log/nginx/ieeewebsite.access.log;
 	error_log  /var/log/nginx/ieeewebsite.error.log;
 
     location /static/ {
-            root @django;
+            root /home/ubuntu/ieeewebsite/;
     }
     location /media/ {
-            root @django;
+            root /home/ubuntu/ieeewebsite/;
     }
 
     location / {
