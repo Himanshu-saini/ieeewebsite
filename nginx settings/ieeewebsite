@@ -4,8 +4,8 @@ upstream django {
 
 server {
   listen 80;
-  server_name www.0.0.0.0;
-  rewrite ^/(.*) http://0.0.0.0/$1 permanent;
+  server_name www.ieeesbjiit.com;
+  rewrite ^/(.*) http://ieeesbjiit.com/$1 permanent;
 }
 
 server {
