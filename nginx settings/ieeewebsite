@@ -12,7 +12,7 @@ server {
     listen 80 default_server;
     listen [::]:80 default_server ipv6only=on;
     server_name 0.0.0.0;
-	root /home/ubuntu/ieeewebsite/
+	root /home/ubuntu/ieeewebsite/;
 	access_log  /var/log/nginx/ieeewebsite.access.log;
 	error_log  /var/log/nginx/ieeewebsite.error.log;
 
