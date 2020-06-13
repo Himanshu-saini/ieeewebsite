@@ -1,3 +1,8 @@
+# Gunicorn server
+upstream django {
+  server  domain.com:9000;
+}
+
 server {
   listen 80;
   server_name www.0.0.0.0;
@@ -11,9 +16,15 @@ server {
 	root        /home/ubuntu/ieeewebsite;
 	access_log  /var/log/nginx/ieeewebsite.access.log;
 	error_log  /var/log/nginx/ieeewebsite.error.log;
+	
+	try_files $uri @django;
 
-    location / {
-            include proxy_params;
-            proxy_pass http://unix:/home/ubuntu/ieeewebsite/ieeewebsite.sock;
-    }
+	# Setup named location for Django requests and handle proxy details
+	location @django {
+	proxy_pass         http://django;
+	proxy_redirect     off;
+	proxy_set_header   Host             $host;
+	proxy_set_header   X-Real-IP        $remote_addr;
+	proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+	}
 }
