@@ -1,4 +1,3 @@
-# Gunicorn server
 upstream django {
   server  unix:/home/ubuntu/ieeewebsite/ieeewebsite.sock;
 }
@@ -13,13 +12,17 @@ server {
     listen 80 default_server;
     listen [::]:80 default_server ipv6only=on;
     server_name 0.0.0.0;
-	root        /home/ubuntu/ieeewebsite;
 	access_log  /var/log/nginx/ieeewebsite.access.log;
 	error_log  /var/log/nginx/ieeewebsite.error.log;
-	
-	try_files $uri @django;
 
-    location / {
+    location /static/ {
+            root @django;
+    }
+    location /media/ {
+            root @django;
+    }
+
+    location @django {
             include proxy_params;
             proxy_pass http://django;
     }
