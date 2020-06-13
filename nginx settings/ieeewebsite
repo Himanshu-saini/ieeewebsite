@@ -23,7 +23,7 @@ server {
             root @django;
     }
 
-    location @django {
+    location / {
             include proxy_params;
             proxy_pass http://django;
     }
