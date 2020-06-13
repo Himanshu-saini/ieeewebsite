@@ -1,16 +1,16 @@
 server {
+  listen 80;
+  server_name www.0.0.0.0;
+  rewrite ^/(.*) http://0.0.0.0/$1 permanent;
+}
+
+server {
     listen 80 default_server;
     listen [::]:80 default_server ipv6only=on;
     server_name 0.0.0.0;
-
-    location = /favicon.ico { access_log off; log_not_found off; }
-
-    location /static/ {
-            root /home/ubuntu/ieeewebsite;
-    }
-    location /media/ {
-            root /home/ubuntu/ieeewebsite;
-    }
+	root        /home/ubuntu/ieeewebsite;
+	access_log  /var/log/nginx/ieeewebsite.access.log;
+	error_log  /var/log/nginx/ieeewebsite.error.log;
 
     location / {
             include proxy_params;

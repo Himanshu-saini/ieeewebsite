@@ -1,19 +1,22 @@
 server {
-    listen 80 default_server;
-    listen [::]:80 default_server ipv6only=on;
+    listen 		80 `	default_server;
+    listen 		[::]:80 default_server ipv6only=on;
     server_name 0.0.0.0;
-
+	root        /home/;
+	access_log  /var/log/nginx/ieeewebsite.access.log;
+	error_log  /var/log/nginx/ieeewebsite.error.log;
+  
     location = /favicon.ico { access_log off; log_not_found off; }
 
     location /static/ {
-            root /ieeewebsite;
+            root /home/ieeewebsite/;
     }
     location /media/ {
-            root /ieeewebsite;
+            root /home/ieeewebsite/;
     }
 
     location / {
             include proxy_params;
-            proxy_pass http://unix:/ieeewebsite/ieeewebsite.sock;
+            proxy_pass http://unix:/home/ieeewebsite/ieeewebsite.sock;
     }
 }
