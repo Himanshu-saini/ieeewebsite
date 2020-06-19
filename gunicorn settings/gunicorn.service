@@ -7,6 +7,3 @@ User=root
 Group=www-data
 WorkingDirectory=/home/ubuntu/ieeewebsite/
 ExecStart=/home/ubuntu/djangoweb/bin/gunicorn --access-logfile gunicorn.log --workers 3 --bind unix:/home/ubuntu/ieeewebsite/ieeewebsite.sock ieeewebsite.wsgi:application
-
-[Install]
-WantedBy=multi-user.target
