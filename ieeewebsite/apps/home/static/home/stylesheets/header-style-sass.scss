@@ -1,25 +1,35 @@
+$navigationbar-color-solid: rgb(20, 39, 57);
+$navigationbar-color-transparent: linear-gradient(to bottom,rgba(0,13, 26,.8) 30%,rgba(0,13, 26,0));
+$text-color: white;
+$border-color:white;
+$text-size-links:1.5em;
+$text-size-name:2.2em;
+$text-size-name-mobile:1.2em;
+
+
 .solid-nav{
-    background: rgba(50,50,50,1);
-    color:white;
+    background: $navigationbar-color-solid;
+    color:$text-color;
     transition:.7s;
 }
 header{
     margin:0;
     width:100%;
-    padding: .5% 1%;
+    box-sizing: border-box;
+    padding: 1% 1%;
     font-family: 'Roboto', sans-serif;
     position:fixed;
     display:flex;
     flex-flow: row nowrap;
-    background: rgba(50,50,50,0);
-    color:white;
+    background: $navigationbar-color-transparent;
+    color:$text-color;
     z-index: 100;
     @media only screen and (min-width:600px){
-        height:8vh;
+        height:10vh;
         justify-content: space-around;
     }
     @media only screen and (max-width:600px){
-        height:8vh;
+        height:10vh;
         justify-content: space-between;
     }
     
@@ -38,7 +48,7 @@ header{
         .logo-container{
             height:90%;
             img{
-                height:90%;
+                height:100%;
                 padding:10%;
                 cursor: pointer;
             }
@@ -46,10 +56,10 @@ header{
         .head-name{
             font-family: 'Open Sans', sans-serif;
             @media only screen and (max-width:600px){
-                font-size: 1.2em;
+                font-size: $text-size-name-mobile;
             }
             @media only screen and (min-width:600px){
-                font-size: 2.2em;
+                font-size: $text-size-name;
             }
             
             padding-left:.2em;
@@ -85,16 +95,14 @@ header{
                     place-content: end center;
                     color:inherit;
                     cursor :pointer;
-                    transition:.5s;
-                    flex-grow: 1;
+                    transition:.2s;
+                    // flex-grow: 1;
                     padding: 0 3%;
-                    font-size: 1.5em;
+                    font-size: $text-size-links;
                     box-sizing: border-box;
                 }
                 .nav-option:hover{
-                    transform:scale(1.1);
-                    background: rgba(100,100,100,.5);
-                    border-bottom: .2em solid rgb(200,200,200);
+                    border-left: .2em solid $border-color;
                 }
             }
         }

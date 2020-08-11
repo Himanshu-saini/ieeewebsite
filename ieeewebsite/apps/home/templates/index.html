@@ -8,13 +8,12 @@
 
 {% block contentstylesheet %}
 <link rel="stylesheet" type="text/css" href="{% sass_src  'home/stylesheets/home-style-sass.scss' %}?{% now 'jS S Y H:i' %}" />
-<link rel="stylesheet" type="text/css" href="{% sass_src  'home/stylesheets/slideshow-style-sass.scss' %}?{% now 'jS S Y H:i' %}" />
 
 {% endblock contentstylesheet %}
     
 {% block content %}
 <div class="body-container">
-    {% include 'slideshow-div.html' %}
+    {% include 'slideshow-container-type1.html' %}
     <div class="body-column">
         <div class="content-container">
             <div class="content-head">
@@ -78,7 +77,5 @@
         </div>
     </div>
 </div>
-
-<script src="{% static 'home/javascripts/slideshow-div.js' %}?{% now 'jS S Y H:i' %}"></script>
 
 {% endblock content %}

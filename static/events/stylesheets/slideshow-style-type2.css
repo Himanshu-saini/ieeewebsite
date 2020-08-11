@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: 80vh;
-  background: #c4fff9;
+  background: #b3e6ff;
   overflow: hidden; }
   .slide-div .slides-container {
     position: relative;
@@ -24,7 +24,7 @@
       height: 70%;
       margin: auto;
       margin-left: 15%;
-      box-shadow: 0 1em 1em black;
+      box-shadow: 0 1em 1em #002233;
       cursor: pointer;
       transition: .5s; }
       .slide-div .slides-container .slide-col img {
@@ -45,8 +45,8 @@
     position: absolute;
     top: 0;
     height: 100%;
+    padding: .3em;
     box-sizing: border-box;
-    padding: .1em;
     font-size: 5em;
     color: white;
     cursor: pointer;
@@ -54,11 +54,18 @@
     display: grid;
     place-content: center; }
     .slide-div .arrow:hover {
-      transform: scale(1.05); }
+      transform: scale(1.1);
+      background: rgba(0, 0, 0, 0.2); }
   .slide-div .left-arrow {
-    left: 0; }
+    left: 0;
+    padding-right: 1em; }
+    .slide-div .left-arrow:hover {
+      background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)); }
   .slide-div .right-arrow {
-    right: 0; }
+    right: 0;
+    padding-left: 1em; }
+    .slide-div .right-arrow:hover {
+      background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)); }
   .slide-div .slide-bullets {
     position: relative;
     width: 100%;
@@ -71,12 +78,13 @@
     .slide-div .slide-bullets .bullets {
       position: relative;
       width: 2em;
-      height: .2em;
+      height: .25em;
       border-radius: 2em;
       background: white;
       margin: 0 .5%;
-      cursor: pointer; }
+      cursor: pointer;
+      background: rgba(0, 34, 51, 0.4); }
     .slide-div .slide-bullets .active-bullet {
-      background: #03062b; }
+      background: #002233; }
 
-/*# sourceMappingURL=slideshow2-style.css.map */
+/*# sourceMappingURL=slideshow-style-type2.css.map */

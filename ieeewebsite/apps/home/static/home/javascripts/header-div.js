@@ -15,8 +15,8 @@ function showmenu()   // for mobile view
     }
 }
 
-window.addEventListener('DOMContentLoaded', function(){
-    var block = document.getElementsByClassName('top-cover')[0];     // get slideshow element of the page
+window.addEventListener('DOMContentLoaded', function(){    // Toggle Header Navigation bar background
+    var block = document.getElementsByClassName('slide-div-full')[0];     // get slideshow element of the page
     if(block != undefined){
         var nav = document.getElementById('navbar');
         nav.classList.remove('solid-nav');
