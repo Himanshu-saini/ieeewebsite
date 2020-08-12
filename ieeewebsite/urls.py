@@ -18,7 +18,9 @@ from django.urls import path,include,re_path
 from django.conf import settings
 from django.conf.urls.static import static
 
-urlpatterns = [
+urlpatterns = static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT) 
+
+urlpatterns += [
     path('admin/', admin.site.urls),
     path('about',include("ieeewebsite.apps.about.urls")),
     path('team',include("ieeewebsite.apps.team.urls")),
@@ -26,4 +28,4 @@ urlpatterns = [
     path('',include("ieeewebsite.apps.home.urls")),
 ] 
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT) 
-urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+# urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
