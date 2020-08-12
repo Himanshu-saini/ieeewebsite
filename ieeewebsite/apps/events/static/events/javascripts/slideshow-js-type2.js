@@ -32,15 +32,11 @@ function setSlide()  // set active slide to window.currentSlide
         window.currentSlide=0;
     }
 
-    var scrollWidth = parseInt(container.offsetWidth);
     var margin = slides[0].offsetLeft;
     var dummyWdith = dummy[0].offsetLeft;
     var width = slides[0].offsetWidth;
     var elemntLength = width+margin/2+dummyWdith;
-    var leftpos= parseInt(container.scrollLeft);
     var newScrollPosition = elemntLength*window.currentSlide ;
-    console.log(scrollWidth,width,margin/2,leftpos)
-    console.log((newScrollPosition)-(elemntLength*window.previousSlide ))
     
     slides[window.previousSlide].classList.remove("zoom-slide");
     slides[window.currentSlide].classList.add("zoom-slide");

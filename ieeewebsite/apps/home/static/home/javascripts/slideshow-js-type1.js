@@ -1,33 +1,54 @@
 document.addEventListener("DOMContentLoaded", function(){
     // Handler when the DOM is fully loaded
-    setTimeout(ToSlideShow, 3000);
+    startSlideshow();
 });
 
-function ToSlideShow() {
-    moveSlide(1);
-    setTimeout(ToSlideShow, 10000); // Change image every  10 seconds
+function startSlideshow(){
+    window.currentSlide = 0;
+    activeSlide(0);
+    window.timer = setTimeout(moveSlide, 4000,1);
 }
-function moveSlide(m){
+
+function moveSlide(num){  
+    clearTimeout(window.timer);  // clear setTimeout function
+    window.previousSlide = window.currentSlide;
+    window.currentSlide = window.currentSlide + num;
+    setSlide();   // change slide
+    setBullet();  // change Active Bullet
+    window.timer = setTimeout(moveSlide,4000,1);
+}
+
+function setSlide(m){
     var row = document.getElementById("slide-id")
     var w = parseInt(row.scrollWidth);
-    var element = document.getElementsByClassName("slide-col");
-    var n = element.length;
-    var elemntLength = element[0].offsetWidth
+    var slides = document.getElementsByClassName("slide-col");
+    var totalSlides = slides.length;
+    
+    if (window.currentSlide < 0){
+        window.currentSlide= totalSlides-1;
+    }
+    else if (window.currentSlide>=totalSlides){
+        window.currentSlide=0;
+    }
 
-    var leftpos= parseInt(row.scrollLeft);
-    var x1 = Math.round(leftpos/elemntLength);
+    var width = slides[0].offsetWidth;
+    var newScrollPosition = width*window.currentSlide ;
 
-    var newleftpos=0;
-    var bullet = document.getElementsByClassName("bullets");
+    row.scrollTo({left:newScrollPosition,behavior: 'smooth'});
+}
 
-    if((leftpos===0)&&(m===-1))
-        newleftpos = (n-1)*elemntLength;
-    else if((leftpos>(n-2)*elemntLength)&&(m===1))
-        newleftpos=0;
-    else
-        newleftpos = (x1+(m)*1)*elemntLength;
-    var x2 = Math.round(newleftpos/elemntLength);
-    bullet[x1].classList.remove("active-bullet");
-    bullet[x2].classList.add("active-bullet");
-    row.scrollTo({left:newleftpos,behavior: 'smooth'});
+function activeSlide(num){   // set active slide to num
+    clearTimeout(window.timer);  // clear setTimeout function
+    window.previousSlide = window.currentSlide;
+    window.currentSlide = num;
+    setSlide();   // change slide
+    setBullet();  // change Active Bullet
+    window.timer = setTimeout(moveSlide,5000,1);
+}
+
+function setBullet(){
+    var container = document.getElementById("slide-bullets");
+    var bullets = container.getElementsByClassName("bullets");
+    bullets[window.previousSlide].classList.remove("active-bullet");
+    bullets[window.currentSlide].classList.add("active-bullet");
 }
