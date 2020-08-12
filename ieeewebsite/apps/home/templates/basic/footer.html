@@ -7,62 +7,38 @@
 <footer>
     <!-- <div class="footer-background"></div> -->
     <div class="footer-container">
-        <div class="footer-column">
-            <div class="column-background"></div>
-            <div class="horizontal-column">
-                <div class="icon-container">
-                    <img src="{% static 'home/images/logo/ieee.png' %}" />
-                </div>
-                <div class="details-wrapper">
-                    <h2>REACH US<hr></h2>
-                    <p>IEEE&nbspSB&nbspJIIT,<br>
-                    JIIT, Sector 62,<br>
-                    NOida-201309</p>
-                </div>
-            </div>
+        <div class="arrow-up" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 192.701 192.701" style="enable-background:new 0 0 192.701 192.701;" xml:space="preserve">
+                <g id="Double_Chevron_Up">
+               <path d="M20.746,104.169l75.61-74.528l75.61,74.54c4.74,4.704,12.439,4.704,17.179,0s4.74-12.319,0-17.011l-84.2-82.997
+                   c-4.559-4.511-12.608-4.535-17.191,0l-84.2,83.009c-4.74,4.692-4.74,12.319,0,17.011C8.307,108.873,16.006,108.873,20.746,104.169
+                   z"/>
+               <path d="M104.946,88.373c-4.559-4.511-12.608-4.535-17.191,0l-84.2,82.997c-4.74,4.704-4.74,12.319,0,17.011
+                   c4.74,4.704,12.439,4.704,17.179,0l75.622-74.528l75.61,74.54c4.74,4.704,12.439,4.704,17.179,0s4.74-12.319,0-17.011
+                   L104.946,88.373z"/>
+                </g>
+            </svg>
         </div>
-        <div class="footer-column">
-            <div class="column-background"></div>
-            <div class="column-heading">
-                <h2>Quick Links</h2>
-                <hr>
-            </div>
-            <div class="column-details">
-                <div class="details-wrapper">
-                    <a class="links" href="https://www.ieee.org" target="_blank">IEEE Org</a>
-                </div>
-                <div class="details-wrapper">
-                    <a class="links" href="//www.jiit.ac.in" target="_blank">JIIT</a>
-                </div>
-            </div>
+        <div class="logo-column">
+            <img src="{% static 'home/images/logo/ieeesbjiit.png' %}" alt="IEEESBJIIT" onclick="location.href='{% url 'home:index' %}'"/>
         </div>
-        <div class="footer-column">
-            <div class="column-background"></div>
-            <div class="column-heading">
-                <h2>Contact Us</h2>
-                <hr>
-            </div>
-            <div class="column-details">
-                <div class="details-wrapper" onclick="window.open('https://www.gmail.com','_blank')">
-                    <div class="icon-container" >
-                        <img src="{% static 'home/images/logo/gmail.png' %}" />
-                    </div>
-                    <div class="info">ieeesbjiit@gmail.com</div>
-                </div>
-                <div class="details-wrapper" onclick="window.open('https://www.facebook.com/ieeesbjiit/','_blank')" >
-                    <div class="icon-container" >
-                        <img src="{% static 'home/images/logo/fb.png' %}" />
-                    </div>
-                    <div class="info">/ieeesbjiit</div>
-                </div>
-                <div class="details-wrapper" onclick="window.open('https://www.instagram.com/ieeesbjiit/','_blank')" >
-                    <div class="icon-container" >
-                        <img src="{% static 'home/images/logo/insta.png' %}" />
-                    </div>
-                    <div class="info">/ieeesbjiit</div>
-                </div>
-            </div>
+        <div class="details-column">
+            <h3>REACH US<hr></h3>
+            <p>JIIT, Sector 62,<br>
+            NOida-201309</p>
         </div>
+        <div class="icons-container">
+            <img class="icon" src="{% static 'home/images/logo/facebook.png' %}" />
+            <img class="icon" src="{% static 'home/images/logo/youtube.png' %}" />
+            <img class="icon" src="{% static 'home/images/logo/google.png' %}" />
+            <img class="icon" src="{% static 'home/images/logo/instagram.png' %}" />
+            <img class="icon" src="{% static 'home/images/logo/linkedin.png' %}" />
+            <img class="icon" src="{% static 'home/images/logo/youtube.png' %}" />
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-heading">IEEESBJIIT</div>
     </div>
 </footer>
 <!--========== END FOOTER ==========-->

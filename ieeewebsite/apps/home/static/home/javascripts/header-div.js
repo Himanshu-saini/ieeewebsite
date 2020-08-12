@@ -34,4 +34,3 @@ window.addEventListener('DOMContentLoaded', function(){    // Toggle Header Navi
     }
 });
 
-

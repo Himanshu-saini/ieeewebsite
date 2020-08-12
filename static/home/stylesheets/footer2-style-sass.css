@@ -7,13 +7,14 @@ footer {
   font-family: 'Open Sans', sans-serif; }
   @media only screen and (max-width: 600px) {
     footer {
-      height: 45vw;
-      font-size: .5em; } }
+      height: 30vw;
+      font-size: .4em; } }
   @media only screen and (min-width: 600px) {
     footer {
       height: 45vh; } }
   footer .footer-container {
     position: relative;
+    width: 40%;
     height: 85%;
     box-sizing: border-box;
     margin: auto;
@@ -21,12 +22,6 @@ footer {
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 45% 35%;
     grid-template-areas: 'arrow-up arrow-up' 'logo details' 'icons icons'; }
-    @media only screen and (max-width: 600px) {
-      footer .footer-container {
-        width: 80%; } }
-    @media only screen and (min-width: 600px) {
-      footer .footer-container {
-        width: 40%; } }
     footer .footer-container .arrow-up {
       grid-area: arrow-up;
       position: relative;
@@ -42,10 +37,10 @@ footer {
         transition: .2s; }
         footer .footer-container .arrow-up svg path {
           fill: white; }
-      footer .footer-container .arrow-up:hover svg {
-        transform: scale(1.1); }
-        footer .footer-container .arrow-up:hover svg path {
-          fill: rgba(255, 255, 255, 0.7); }
+        footer .footer-container .arrow-up svg:hover {
+          transform: scale(1.1); }
+          footer .footer-container .arrow-up svg:hover path {
+            fill: rgba(255, 255, 255, 0.7); }
     footer .footer-container .logo-column {
       grid-area: logo;
       position: relative;
@@ -119,4 +114,4 @@ footer {
       font-weight: bold;
       letter-spacing: 0.5em; }
 
-/*# sourceMappingURL=footer-style-sass.css.map */
+/*# sourceMappingURL=footer2-style-sass.css.map */
