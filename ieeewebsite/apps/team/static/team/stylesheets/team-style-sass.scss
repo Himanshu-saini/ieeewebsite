@@ -1,7 +1,7 @@
 @import "home/stylesheets/animation-rule-scss";
 
-$small-break: 600px;
-
+$mobile-break-point: 768px;
+$tablet-break-point: 1200px;
 body
 {
     margin:0;
@@ -9,7 +9,13 @@ body
     .body-container
     {
         position:relative;
-        top:9vh;
+        top:7vh;
+        @media screen and (min-width: $mobile-break-point) and (max-width: $tablet-break-point){
+            top:6vw;
+        }
+        @media screen and (min-width: $tablet-break-point){
+            top:10vh;
+        }
         display:flex;
         flex-flow: column nowrap;
         justify-content: flex-start;
@@ -20,7 +26,7 @@ body
             position: relative;
             width:100%;
             height:15vh;
-            @media only screen and (min-width:$small-break){
+            @media only screen and (min-width:$mobile-break-point){
                 height:20vh;
             }
             overflow:hidden;
@@ -44,7 +50,7 @@ body
                 {
                     margin-top:20%;
                     font-size: 2.5em;
-                    @media only screen and (min-width:$small-break){
+                    @media only screen and (min-width:$mobile-break-point){
                         margin:0 0 1% 0;
                         font-size: 3.5em;
                         
@@ -71,7 +77,7 @@ body
             //         text-align: center;
             //         font-size:1.6em;
             //         margin:1%;
-            //         @media only screen and (min-width:$small-break){
+            //         @media only screen and (min-width:$mobile-break-point){
             //             font-size:2.4em;
             //         }
             //     }
@@ -89,7 +95,7 @@ body
                     $box-length:40vw;
                     width:$box-length;
                     height:$box-length;
-                    @media only screen and (min-width:$small-break){
+                    @media only screen and (min-width:$mobile-break-point){
                         $box-length:21vw;
                         width:$box-length;
                         height:$box-length;
@@ -132,7 +138,7 @@ body
                             font-size: .5em;
                             font-family: 'Righteous', cursive;
                             // overflow:hidden;
-                            @media only screen and (min-width:$small-break){
+                            @media only screen and (min-width:$mobile-break-point){
                                 font-size: 1em;
                             }   
                             &:hover{
@@ -261,7 +267,7 @@ body
                     $box-length:40vw;
                     width:$box-length;
                     height:$box-length;
-                    @media only screen and (min-width:$small-break){
+                    @media only screen and (min-width:$mobile-break-point){
                         $box-length:21vw;
                         width:$box-length;
                         height:$box-length;
@@ -308,7 +314,7 @@ body
                             margin: 0;
                             font-size: 1em;
 
-                            @media only screen and (min-width:$small-break){
+                            @media only screen and (min-width:$mobile-break-point){
                                 font-size: 1em;
                             }
                             
@@ -341,7 +347,7 @@ body
                             border-radius: 3px;
                             z-index:1;
                             font-size: .7em;
-                            @media only screen and (min-width:$small-break){
+                            @media only screen and (min-width:$mobile-break-point){
                                 font-size: 1em;
                             }
                         }
@@ -397,7 +403,7 @@ body
                 position:relative;
                 width:100%;
                 height:38vh;
-                @media only screen and (min-width:$small-break){
+                @media only screen and (min-width:$mobile-break-point){
                     height:70vh;
                 }
                 margin:2% 0;
@@ -421,7 +427,7 @@ body
                         min-width:100%;
                         height:100%;
                         padding:0 15%;
-                        @media only screen and (min-width:$small-break ){
+                        @media only screen and (min-width:$mobile-break-point ){
                             //min-width:70%;
                             padding:0 15%; 
                         } 
@@ -430,7 +436,7 @@ body
                             // width:100%;
                             margin:2% auto;
                             h2{
-                                @media only screen and (min-width:$small-break ){
+                                @media only screen and (min-width:$mobile-break-point ){
                                     font-size:1.8em;
                                 }
                                 font-size: 1.2em;
@@ -456,7 +462,7 @@ body
                                 margin:.5vw 1vw;
                                 //padding:1%;
                                 //box-sizing: border-box; 
-                                @media only screen and (min-width:$small-break){
+                                @media only screen and (min-width:$mobile-break-point){
                                     $length:8vw;
                                     width:$length;
                                     height:$length;   
@@ -531,7 +537,7 @@ body
                         min-width:100%;
                         height:100%;
                         padding:0 15%;
-                        @media only screen and (min-width:$small-break ){
+                        @media only screen and (min-width:$mobile-break-point ){
                             //min-width:70%;
                             padding:0 10%; 
                         }
@@ -542,7 +548,7 @@ body
                             // width:100%;
                             margin:2% auto;
                             h2{
-                                @media only screen and (min-width:$small-break ){
+                                @media only screen and (min-width:$mobile-break-point ){
                                     font-size:1.8em;
                                 }
                                 font-size: 1.2em;
@@ -566,7 +572,7 @@ body
                                 width:20vw;
                                 height:20vw;  
                                 margin:.5vw 1vw; 
-                                @media only screen and (min-width:$small-break){
+                                @media only screen and (min-width:$mobile-break-point){
                                     $length:8vw;
                                     width:12vw;
                                     height:10vw;   

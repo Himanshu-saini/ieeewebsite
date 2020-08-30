@@ -1,3 +1,5 @@
+$mobile-break-point: 768px;
+$tablet-break-point: 1200px;
 body{
     margin:0;
     padding:0;
@@ -13,11 +15,11 @@ body{
             width:100%;
             box-sizing: border-box;
             
-            @media only screen and (max-width:600px){
+            @media only screen and (max-width:$mobile-break-point){
                 font-size: .5em;
                 min-height:15vh;
             }
-            @media only screen and (min-width:600px){
+            @media only screen and (min-width:$mobile-break-point){
                 font-size: 1em;
                 min-height:40vh;
             }
@@ -86,10 +88,10 @@ body{
                 display: grid;
                 grid-template-columns: 50% 50%;
                 .content-container{
-                    @media only screen and (max-width:600px){
+                    @media only screen and (max-width:$mobile-break-point){
                         font-size: .6em;
                     }
-                    @media only screen and (min-width:600px){
+                    @media only screen and (min-width:$mobile-break-point){
                         font-size: 1em;
                     }
                     grid-area:content-col;

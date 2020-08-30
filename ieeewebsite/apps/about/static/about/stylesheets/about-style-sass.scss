@@ -1,12 +1,19 @@
 @import 'home/stylesheets/animation-rule-scss';
-
+$mobile-break-point: 768px;
+$tablet-break-point: 1200px;
 body{
     margin:0;
     padding:0;
     .body-container{
         width:100%;
         position:relative;
-        top:8vh;
+        top:7vh;
+        @media screen and (min-width: $mobile-break-point) and (max-width: $tablet-break-point){
+            top:6vw;
+        }
+        @media screen and (min-width: $tablet-break-point){
+            top:10vh;
+        }
         display:flex;
         flex-flow:column nowrap;
         justify-content: flex-start;
@@ -15,11 +22,11 @@ body{
             position:relative;
             width:100%;
             box-sizing: border-box;
-            @media only screen and (max-width:600px){
+            @media only screen and (max-width:$mobile-break-point){
                 font-size: .5em;
                 min-height:50vh;
             }
-            @media only screen and (min-width:600px){
+            @media only screen and (min-width:$mobile-break-point){
                 font-size: 1em;
                 min-height:50vh;
             }
@@ -121,7 +128,7 @@ body{
             width:80%;
             min-height:70vh;
             margin: auto;
-            @media only screen and (min-width:600px){
+            @media only screen and (min-width:$mobile-break-point){
                 grid-template-columns: 50% 50%;
                 &:nth-child(even){
                     grid-template-areas: "image-grid content-container";
@@ -132,7 +139,7 @@ body{
 
                 }
             }
-            @media only screen and (max-width:600px){
+            @media only screen and (max-width:$mobile-break-point){
                 grid-template-rows: 50% 50%;
                 grid-template-areas: "image-grid" "content-container";
 
@@ -140,11 +147,11 @@ body{
         }
         .horizontal-grid-3{
             display:grid;
-            @media only screen and (min-width:600px){
+            @media only screen and (min-width:$mobile-break-point){
                 grid-template-columns: 40% 35% 25%;
                 grid-template-areas: ". content-container .";
             }
-            @media only screen and (max-width:600px){
+            @media only screen and (max-width:$mobile-break-point){
                 grid-template-columns: 60% 40%;
                 grid-template-areas: ". ." "content-container content-container";
             }

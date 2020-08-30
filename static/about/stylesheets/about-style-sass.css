@@ -100,20 +100,26 @@ body {
   body .body-container {
     width: 100%;
     position: relative;
-    top: 8vh;
+    top: 7vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     font-family: 'Lato', sans-serif; }
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      body .body-container {
+        top: 6vw; } }
+    @media screen and (min-width: 1200px) {
+      body .body-container {
+        top: 10vh; } }
     body .body-container .body-column {
       position: relative;
       width: 100%;
       box-sizing: border-box; }
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 768px) {
         body .body-container .body-column {
           font-size: .5em;
           min-height: 50vh; } }
-      @media only screen and (min-width: 600px) {
+      @media only screen and (min-width: 768px) {
         body .body-container .body-column {
           font-size: 1em;
           min-height: 50vh; } }
@@ -194,14 +200,14 @@ body {
       width: 80%;
       min-height: 70vh;
       margin: auto; }
-      @media only screen and (min-width: 600px) {
+      @media only screen and (min-width: 768px) {
         body .body-container .horizontal-grid-2 {
           grid-template-columns: 50% 50%; }
           body .body-container .horizontal-grid-2:nth-child(even) {
             grid-template-areas: "image-grid content-container"; }
           body .body-container .horizontal-grid-2:nth-child(odd) {
             grid-template-areas: "content-container image-grid "; } }
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 768px) {
         body .body-container .horizontal-grid-2 {
           grid-template-rows: 50% 50%;
           grid-template-areas: "image-grid" "content-container"; } }
@@ -209,11 +215,11 @@ body {
       display: grid;
       justify-content: center;
       grid-gap: 0; }
-      @media only screen and (min-width: 600px) {
+      @media only screen and (min-width: 768px) {
         body .body-container .horizontal-grid-3 {
           grid-template-columns: 40% 35% 25%;
           grid-template-areas: ". content-container ."; } }
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 768px) {
         body .body-container .horizontal-grid-3 {
           grid-template-columns: 60% 40%;
           grid-template-areas: ". ." "content-container content-container"; } }

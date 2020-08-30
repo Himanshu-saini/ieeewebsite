@@ -1,4 +1,5 @@
-$mobile-break-point: 600px;
+$mobile-break-point: 768px;
+$tablet-break-point: 1200px;
 $bullet-color: rgba(255,255,255,1);
 $active-bullet-color: rgba(0, 34, 51,1);
 
@@ -9,7 +10,7 @@ $active-bullet-color: rgba(0, 34, 51,1);
     margin:0;
     padding: 0;
     user-select: none;
-    @media screen and (min-width: $mobile-break-point){
+    @media screen and (min-width: $tablet-break-point){
             height: 90vh;
     }
     .Slides-container{

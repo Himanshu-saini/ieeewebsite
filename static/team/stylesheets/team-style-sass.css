@@ -99,21 +99,26 @@ body {
   padding: 0; }
   body .body-container {
     position: relative;
-    top: 9vh;
+    top: 7vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     width: 100%;
     font-family: 'Montserrat', sans-serif; }
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      body .body-container {
+        top: 6vw; } }
+    @media screen and (min-width: 1200px) {
+      body .body-container {
+        top: 10vh; } }
     body .body-container .head-division {
       position: relative;
       width: 100%;
       height: 15vh;
       overflow: hidden; }
-
-@media only screen and (min-width: 600px) {
-  body .body-container .head-division {
-    height: 20vh; } }
+      @media only screen and (min-width: 768px) {
+        body .body-container .head-division {
+          height: 20vh; } }
       body .body-container .head-division .background-img {
         position: absolute;
         width: 100%;
@@ -129,11 +134,10 @@ body {
         body .body-container .head-division .div-heading h1 {
           margin-top: 20%;
           font-size: 2.5em; }
-
-@media only screen and (min-width: 600px) {
-  body .body-container .head-division .div-heading h1 {
-    margin: 0 0 1% 0;
-    font-size: 3.5em; } }
+          @media only screen and (min-width: 768px) {
+            body .body-container .head-division .div-heading h1 {
+              margin: 0 0 1% 0;
+              font-size: 3.5em; } }
     body .body-container .sub-division {
       position: relative;
       width: 100%;
@@ -153,11 +157,10 @@ body {
           height: 40vw;
           margin: 3% 4%;
           border-radius: 5px; }
-
-@media only screen and (min-width: 600px) {
-  body .body-container .sub-division .present-team-div .member-col {
-    width: 21vw;
-    height: 21vw; } }
+          @media only screen and (min-width: 768px) {
+            body .body-container .sub-division .present-team-div .member-col {
+              width: 21vw;
+              height: 21vw; } }
           body .body-container .sub-division .present-team-div .member-col .inner-col:hover .member-name {
             left: -6%; }
             body .body-container .sub-division .present-team-div .member-col .inner-col:hover .member-name h1 {
@@ -180,10 +183,9 @@ body {
               height: 100%;
               font-size: .5em;
               font-family: 'Righteous', cursive; }
-
-@media only screen and (min-width: 600px) {
-  body .body-container .sub-division .present-team-div .member-col .inner-col .overlay-content {
-    font-size: 1em; } }
+              @media only screen and (min-width: 768px) {
+                body .body-container .sub-division .present-team-div .member-col .inner-col .overlay-content {
+                  font-size: 1em; } }
               body .body-container .sub-division .present-team-div .member-col .inner-col .overlay-content:hover .ieee-name {
                 -webkit-animation: fade-in-top 1s ease forwards;
                 -moz-animation: fade-in-top 1s ease forwards;
@@ -293,11 +295,10 @@ body {
           height: 40vw;
           margin: 3% 4%;
           border-radius: 5px; }
-
-@media only screen and (min-width: 600px) {
-  body .body-container .sub-division .present-team-div-2 .member-col {
-    width: 21vw;
-    height: 21vw; } }
+          @media only screen and (min-width: 768px) {
+            body .body-container .sub-division .present-team-div-2 .member-col {
+              width: 21vw;
+              height: 21vw; } }
           body .body-container .sub-division .present-team-div-2 .member-col .inner-col:hover .member-name {
             left: -6%; }
             body .body-container .sub-division .present-team-div-2 .member-col .inner-col:hover .member-name h1 {
@@ -326,10 +327,9 @@ body {
               float: right;
               margin: 0;
               font-size: 1em; }
-
-@media only screen and (min-width: 600px) {
-  body .body-container .sub-division .present-team-div-2 .member-col .inner-col .member-name {
-    font-size: 1em; } }
+              @media only screen and (min-width: 768px) {
+                body .body-container .sub-division .present-team-div-2 .member-col .inner-col .member-name {
+                  font-size: 1em; } }
             body .body-container .sub-division .present-team-div-2 .member-col .inner-col .member-name:bfore {
               content: '';
               position: absolute;
@@ -351,10 +351,9 @@ body {
               border-radius: 3px;
               z-index: 1;
               font-size: .7em; }
-
-@media only screen and (min-width: 600px) {
-  body .body-container .sub-division .present-team-div-2 .member-col .inner-col .position-name {
-    font-size: 1em; } }
+              @media only screen and (min-width: 768px) {
+                body .body-container .sub-division .present-team-div-2 .member-col .inner-col .position-name {
+                  font-size: 1em; } }
             body .body-container .sub-division .present-team-div-2 .member-col .inner-col .position-name:before {
               position: absolute;
               left: -18%;
@@ -395,10 +394,9 @@ body {
         height: 38vh;
         margin: 2% 0;
         overflow: hidden; }
-
-@media only screen and (min-width: 600px) {
-  body .body-container .sub-division .prev-team {
-    height: 70vh; } }
+        @media only screen and (min-width: 768px) {
+          body .body-container .sub-division .prev-team {
+            height: 70vh; } }
         body .body-container .sub-division .prev-team .inner-wrapper {
           display: flex;
           flex-flow: row nowrap;
@@ -414,20 +412,18 @@ body {
             min-width: 100%;
             height: 100%;
             padding: 0 15%; }
-
-@media only screen and (min-width: 600px) {
-  body .body-container .sub-division .prev-team .inner-wrapper .team-div {
-    padding: 0 15%; } }
+            @media only screen and (min-width: 768px) {
+              body .body-container .sub-division .prev-team .inner-wrapper .team-div {
+                padding: 0 15%; } }
             body .body-container .sub-division .prev-team .inner-wrapper .team-div .session-col {
               position: relative;
               margin: 2% auto; }
               body .body-container .sub-division .prev-team .inner-wrapper .team-div .session-col h2 {
                 font-size: 1.2em;
                 margin: 0 auto; }
-
-@media only screen and (min-width: 600px) {
-  body .body-container .sub-division .prev-team .inner-wrapper .team-div .session-col h2 {
-    font-size: 1.8em; } }
+                @media only screen and (min-width: 768px) {
+                  body .body-container .sub-division .prev-team .inner-wrapper .team-div .session-col h2 {
+                    font-size: 1.8em; } }
             body .body-container .sub-division .prev-team .inner-wrapper .team-div .member-container {
               position: relative;
               display: flex;
@@ -444,12 +440,11 @@ body {
                 position: relative;
                 overflow: hidden;
                 cursor: pointer; }
-
-@media only screen and (min-width: 600px) {
-  body .body-container .sub-division .prev-team .inner-wrapper .team-div .member-container .member-col {
-    width: 8vw;
-    height: 8vw;
-    margin: .5vw; } }
+                @media only screen and (min-width: 768px) {
+                  body .body-container .sub-division .prev-team .inner-wrapper .team-div .member-container .member-col {
+                    width: 8vw;
+                    height: 8vw;
+                    margin: .5vw; } }
                 body .body-container .sub-division .prev-team .inner-wrapper .team-div .member-container .member-col .member-info {
                   position: absolute;
                   width: 8vw;
@@ -488,20 +483,18 @@ body {
             min-width: 100%;
             height: 100%;
             padding: 0 15%; }
-
-@media only screen and (min-width: 600px) {
-  body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 {
-    padding: 0 10%; } }
+            @media only screen and (min-width: 768px) {
+              body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 {
+                padding: 0 10%; } }
             body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 .session-col {
               position: relative;
               margin: 2% auto; }
               body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 .session-col h2 {
                 font-size: 1.2em;
                 margin: 0 auto; }
-
-@media only screen and (min-width: 600px) {
-  body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 .session-col h2 {
-    font-size: 1.8em; } }
+                @media only screen and (min-width: 768px) {
+                  body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 .session-col h2 {
+                    font-size: 1.8em; } }
             body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 .member-container {
               position: relative;
               display: flex;
@@ -517,13 +510,12 @@ body {
                 transition: .5s;
                 position: relative;
                 cursor: pointer; }
-
-@media only screen and (min-width: 600px) {
-  body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 .member-container .member-col {
-    width: 12vw;
-    height: 10vw;
-    margin: 0 1vw;
-    top: 0; } }
+                @media only screen and (min-width: 768px) {
+                  body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 .member-container .member-col {
+                    width: 12vw;
+                    height: 10vw;
+                    margin: 0 1vw;
+                    top: 0; } }
                 body .body-container .sub-division .prev-team .inner-wrapper .team-div-2 .member-container .member-col .display-pic {
                   transform-origin: 50% -10%;
                   position: absolute;

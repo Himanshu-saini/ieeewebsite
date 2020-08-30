@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', function(){    // Toggle Header Navi
             var navHeight = parseInt(nav.offsetHeight);
             var togglePoint = blockHeight - navHeight;
             var windowScrollY = parseInt(window.scrollY);   // get the scroll position of the window 
-            if(windowScrollY >= togglePoint)                      // 580 is length of slideshow div
+            if(windowScrollY >= togglePoint)                      
                 nav.classList.add('solid-nav');
             else
                 nav.classList.remove('solid-nav');

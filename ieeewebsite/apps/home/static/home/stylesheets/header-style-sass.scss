@@ -1,11 +1,12 @@
-$mobile-break-point: 600px;
+$mobile-break-point: 768px;
+$tablet-break-point: 1200px;
 $navigationbar-color-solid: rgb(20, 39, 57);
-$navigationbar-color-transparent: linear-gradient(to bottom,rgba(0,13, 26,.8) 30%,rgba(0,13, 26,0));
+$navigationbar-color-transparent: linear-gradient(to bottom,rgba(0,13, 26,.6) ,rgba(0,13, 26,0));
 $text-color: white;
 $border-color:white;
 $text-size-links:1.5em;
-$text-size-name:2.2em;
-$text-size-name-mobile:1.2em;
+$text-size:2.2em;
+$text-size-mobile:1.2em;
 
 
 .solid-nav{
@@ -25,22 +26,23 @@ header{
     background: $navigationbar-color-transparent;
     color:$text-color;
     z-index: 100;
-    @media only screen and (min-width:600px){
+    height:7vh;
+    justify-content: space-between;
+    @media screen and (min-width: $mobile-break-point) and (max-width: $tablet-break-point){
+        height:6vw;
+        justify-content: space-around;
+    }
+    @media screen and (min-width: $tablet-break-point){
         height:10vh;
         justify-content: space-around;
     }
-    @media only screen and (max-width:600px){
-        height:10vh;
-        justify-content: space-between;
-    }
-    
     #main-col{
         height:100%;
         margin-right:10%;
-        @media only screen and (min-width:600px){
+        @media only screen and (min-width:$mobile-break-point){
             width:20%;
         }
-        @media only screen and (max-width:600px){
+        @media only screen and (max-width:$mobile-break-point){
             width:50%;
         }
         display:flex;
@@ -56,11 +58,9 @@ header{
         }
         .head-name{
             font-family: 'Open Sans', sans-serif;
-            @media only screen and (max-width:600px){
-                font-size: $text-size-name-mobile;
-            }
-            @media only screen and (min-width:600px){
-                font-size: $text-size-name;
+            font-size: $text-size-mobile;
+            @media only screen and (min-width:$tablet-break-point){
+                font-size: $text-size;
             }
             
             padding-left:.2em;
@@ -76,7 +76,7 @@ header{
         display:flex;
         flex-flow: row nowrap;
         justify-content: space-around;
-        @media only screen and (min-width:600px){
+        @media only screen and (min-width:$mobile-break-point){
             width:30%;
             #dropdown-arrow{
                 display:none;
@@ -107,7 +107,7 @@ header{
                 }
             }
         }
-        @media only screen and (max-width:600px){
+        @media only screen and (max-width:$mobile-break-point){
             width:20%;
         #dropdown-arrow{
             width:100%;
@@ -128,19 +128,20 @@ header{
         }
         #nav-list{
             position:absolute;
-            right:0%;
-            top:100%;
+            left:0%;
+            bottom:-100%;
+            z-index:-10;
             display:flex;
             flex-flow: column nowrap;
             justify-content: flex-start;
-            width:60%;
-            height: 100vh;
+            width:100%;
+            height: auto;
             background: rgba(50,50,50,1);
             border:2.5px double rgb(10,10,10);
             box-shadow: -1px 0 2px rgb(50,50,50);
             transition:.7s;
-            transform: translate(100%,0%);
-            transform-origin: 100% 0;
+            //transform: translate(100%,0%);
+            //transform-origin: 100% 0;
             .nav-option{
                 text-decoration:none;
                 color:inherit;

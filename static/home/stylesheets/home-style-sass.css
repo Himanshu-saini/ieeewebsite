@@ -11,16 +11,14 @@ body {
     body .body-container .body-column {
       width: 100%;
       box-sizing: border-box; }
-
-@media only screen and (max-width: 600px) {
-  body .body-container .body-column {
-    font-size: .5em;
-    min-height: 15vh; } }
-
-@media only screen and (min-width: 600px) {
-  body .body-container .body-column {
-    font-size: 1em;
-    min-height: 40vh; } }
+      @media only screen and (max-width: 768px) {
+        body .body-container .body-column {
+          font-size: .5em;
+          min-height: 15vh; } }
+      @media only screen and (min-width: 768px) {
+        body .body-container .body-column {
+          font-size: 1em;
+          min-height: 40vh; } }
       body .body-container .body-column .content-container {
         position: relative;
         width: 70%;
@@ -73,14 +71,12 @@ body {
           padding: 0;
           height: 30%;
           justify-content: space-around; }
-
-@media only screen and (max-width: 600px) {
-  body .body-container .body-column .row-grid .content-container {
-    font-size: .6em; } }
-
-@media only screen and (min-width: 600px) {
-  body .body-container .body-column .row-grid .content-container {
-    font-size: 1em; } }
+          @media only screen and (max-width: 768px) {
+            body .body-container .body-column .row-grid .content-container {
+              font-size: .6em; } }
+          @media only screen and (min-width: 768px) {
+            body .body-container .body-column .row-grid .content-container {
+              font-size: 1em; } }
           body .body-container .body-column .row-grid .content-container .large-text {
             font-weight: 700; }
           body .body-container .body-column .row-grid .content-container .link-button {

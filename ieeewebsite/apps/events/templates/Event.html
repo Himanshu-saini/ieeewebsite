@@ -7,6 +7,7 @@
 {% endblock title %}
 {% block contentstylesheet %}
 <link rel="stylesheet" type="text/css" href="{% sass_src  'events/stylesheets/event-style.scss' %}?{% now 'jS S Y H:i' %}" />
+<link rel="stylesheet" type="text/css" href="{% sass_src  'events/stylesheets/events-column-style.scss' %}?{% now 'jS S Y H:i' %}" />
 <script src="{% static 'events/javascripts/event-page.js' %}?{% now 'jS S Y H:i' %}"></script>
 
 {% endblock contentstylesheet %}
@@ -14,46 +15,9 @@
 {% block content %}
 <div class="body-container">
     {% include 'slideshow-container-type2.html' %}
-    <div class="events-wrapper">
-        <div class="heading-container">
-            <div class="heading">Upcoming Events</div>
-            <hr>
-        </div>
-        <div class="events-container">
-            <div class="nav-arrow ">&#10094;</div>
-            <div class="scroll-container">
-                {% for i in mevents %}
-                <div class="event-column">
-                    <div class="image-container">
-                        <img src="{% static 'events/images/poster/Techblocks_5.2_DSA.jpg' %}" />
-                    </div>
-                    <div class="event-details">
-                        <div class="heading-column">
-                            <div class="heading">
-                                ALGORITH AND DATA STRUCTURE
-                            </div>
-                            <hr>
-                            <div class="event-name">
-                                TECHBLOCKS 5.1
-                            </div>
-                        </div>
-                        <div class="more-details">
-                            <div class="detail-col">20 Sept</div>
-                            <hr>
-                            <div class="detail-col">5:00pm</div>
-                            <hr>
-                            <div class="detail-col">G9</div>
-                        </div>
-                        <div class="tags-list">
-                            <div class="tag">{{ "Classes"|upper }}</div>
-                            <div class="tag">{{ "Prize worth 1k"|upper }}</div>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-            <div class="nav-arrow">&#10095;</div>
-        </div>
-    </div>
+    {% if upcoming_events %}
+    {% include 'upcoming_events_column.html' %}
+    {% endif %}
+    {% include 'all_events_column.html' %}
 </div>
 {% endblock content %}

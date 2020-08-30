@@ -1,0 +1,49 @@
+{% load custom_filters %}
+{% load static %}
+{% load sass_tags %}
+
+<div class="events-wrapper">
+    <div class="heading-container">
+        <div class="heading">Upcoming Events</div>
+        <hr>
+    </div>
+    <div class="events-container">
+        <div class="nav-arrow " onclick="moveColumn(this,-1)">&#10094;</div>
+        <div class="scroll-container">
+            {% for event in upcoming_events %}
+            <div class="event-column">
+                <div class="image-container">
+                    <img src="{{ event.Display_image.url }}" alt="{{ event.Event_Name }}" />
+                </div>
+                <div class="event-details">
+                    <div class="heading-column">
+                        <div class="heading">
+                            {{ event.Event_Name|upper }}
+                        </div>
+                        <hr>
+                        <div class="event-name">
+                            {{ event.Event_Heading|upper }}
+                        </div>
+                    </div>
+                    <div class="more-details">
+                        <div class="detail-col">{{ event.Event_Date|date:"d M Y" }}</div>
+                        <hr>
+                        <div class="detail-col">{{ event.Event_Time|time:"H:i A" }}</div>
+                        <hr>
+                        <div class="detail-col">{{ event.Event_Venue|default:"--" }}</div>
+                    </div>
+                    <div class="tags-list">
+                        {% for tag in event.tags|default_if_none:''|split:',' %}
+                        <div class="tag">{{ tag|upper }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="dummy"></div>
+        </div>
+        <div class="nav-arrow" onclick="moveColumn(this,1)">&#10095;</div>
+    </div>
+</div>
+
+<script src="{% static 'events/javascripts/events-column-js.js' %}?{% now 'jS S Y H:i' %}"></script>
